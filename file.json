@@ -1,0 +1,2844 @@
+{
+  "version": "1.29.0",
+  "controls": [
+    {
+      "id": "V-72841",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW port\" stdout should match /5432/"
+    },
+    {
+      "id": "V-72847",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be directory"
+    },
+    {
+      "id": "V-72847",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72847",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-72847",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72847",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data/pg_log -type f -perm 600 ! -perm 600 | wc -l stdout.strip should eq \"0\""
+    },
+    {
+      "id": "V-72851",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Can't read run query \"SELECT current_setting('client_min_messages');\" on postgres_session: error\n\ncould not change directory to \"/home/vagrant\": Permission denied\n output ",
+      "message": "undefined method `output' for \"output\":String",
+      "exception": "NoMethodError",
+      "backtrace": [
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:115:in `block (3 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `each'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `inject'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-72851.rb:118:in `block (3 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-72851",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration client_min_messages should eq \"error\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be directory"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5 should be directory"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5 should be owned by \"root\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5 mode should cmp == \"0755\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/bin should be directory"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/bin should be owned by \"root\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/bin mode should cmp == \"0755\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "File /usr/pgsql-9.5/include should be directory",
+      "message": "expected `File /usr/pgsql-9.5/include.directory?` to return true, got false"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "File /usr/pgsql-9.5/include should be owned by \"root\"",
+      "message": "expected `File /usr/pgsql-9.5/include.owned_by?(\"root\")` to return true, got false"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "File /usr/pgsql-9.5/include mode should cmp == \"0755\"",
+      "message": "wrong number of arguments (given 1, expected 0)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/matchers/matchers.rb:317:in `to_s'",
+        "/Users/aaronl/Desktop/inspec/lib/matchers/matchers.rb:317:in `block (2 levels) in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/matchers/dsl.rb:338:in `block in define_user_override'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/expectations/handler.rb:35:in `handle_failure'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-72853.rb:127:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/lib should be directory"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/lib should be owned by \"root\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/lib mode should cmp == \"0755\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/share should be directory"
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/share should be owned by \"root\""
+    },
+    {
+      "id": "V-72853",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/share mode should cmp == \"0755\""
+    },
+    {
+      "id": "V-72855",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"\\df+\" stdout should match /5432/",
+      "message": "expected \"public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\\npublic|armor|text|bytea, text...m_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,37 @@\n-/5432/\n+public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|armor|text|bytea, text[], text[]|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|crypt|text|text, text|normal|invoker|immutable|stig_dba|c|pg_crypt|\n+public|dearmor|bytea|text|normal|invoker|immutable|stig_dba|c|pg_dearmor|\n+public|decrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt|\n+public|decrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt_iv|\n+public|digest|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|digest|bytea|text, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|encrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt|\n+public|encrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt_iv|\n+public|gen_random_bytes|bytea|integer|normal|invoker|volatile|stig_dba|c|pg_random_bytes|\n+public|gen_random_uuid|uuid||normal|invoker|volatile|stig_dba|c|pg_random_uuid|\n+public|gen_salt|text|text|normal|invoker|volatile|stig_dba|c|pg_gen_salt|\n+public|gen_salt|text|text, integer|normal|invoker|volatile|stig_dba|c|pg_gen_salt_rounds|\n+public|hmac|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|hmac|bytea|text, text, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|pgp_armor_headers|SETOF record|text, OUT key text, OUT value text|normal|invoker|immutable|stig_dba|c|pgp_armor_headers|\n+public|pgp_key_id|text|bytea|normal|invoker|immutable|stig_dba|c|pgp_key_id_w|\n+public|pgp_pub_decrypt|text|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_encrypt|bytea|text, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt|bytea|text, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_sym_decrypt|text|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt|text|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_encrypt|bytea|text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt|bytea|text, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n"
+    },
+    {
+      "id": "V-72859",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'du' stdout should match /5432/",
+      "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
+    },
+    {
+      "id": "V-72859",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'dp' stdout should match /5432/",
+      "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
+    },
+    {
+      "id": "V-72861",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c '\\d+ <schema_name>.<table_name>' stdout should match /5432/",
+      "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW max_connections\" stdout.strip should be <= 100"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL query: SELECT rolname,rolconnlimit from pg_authid; output should not contain \"-1\"",
+      "message": "expected \"postgres|-1\\nstig_dba|-1\\nstig_user|-1\" not to contain \"-1\""
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='postgres'; output should be <= -1"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='postgres'; output should not match /nil/"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='mitre_dba'; output should be <= -1"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='mitre_dba'; output should not match /nil/"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='mitre'; output should be <= -1"
+    },
+    {
+      "id": "V-72863",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SELECT rolconnlimit from pg_authid where rolname='mitre'; output should not match /nil/"
+    },
+    {
+      "id": "V-72865",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\dp *.*\" stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|||\\ninformation_schema|_pg_foreign_servers|view|||...appings|view|=r/postgres||\\npg_catalog|pg_views|view|=r/postgres||\\npublic|stig_test_table|table|||\""
+    },
+    {
+      "id": "V-72867",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\du\" stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\""
+    },
+    {
+      "id": "V-72883",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dn *.*' stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"information_schema|postgres\\npg_catalog|postgres\\npg_temp_1|postgres\\npg_toast|postgres\\npg_toast_temp_1|postgres\\npublic|postgres\""
+    },
+    {
+      "id": "V-72883",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dt *.*' stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"information_schema|sql_features|table|postgres\\ninformation_schema|sql_implementation_info|table|pos...e|table|postgres\\npg_catalog|pg_user_mapping|table|postgres\\npublic|stig_test_table|table|stig_user\""
+    },
+    {
+      "id": "V-72883",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\ds *.*' stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"No matching relations found.\""
+    },
+    {
+      "id": "V-72883",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dv *.*' stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|postgres\\ninformation_schema|_pg_foreign_servers|v...pg_user|view|postgres\\npg_catalog|pg_user_mappings|view|postgres\\npg_catalog|pg_views|view|postgres\""
+    },
+    {
+      "id": "V-72883",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\df+ *.*' stdout.strip should be <= 100",
+      "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_char_max_length|integer|typid oid, typmod integer|normal|invoker|immutable|po...sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\""
+    },
+    {
+      "id": "V-72885",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be directory"
+    },
+    {
+      "id": "V-72885",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72885",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-72885",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72885",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data/pg_log -type f -perm 600 ! -perm 600 | wc -l stdout.strip should eq \"0\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be directory"
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be directory"
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/pg_log mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Can't read run query \"SELECT current_setting('client_min_messages')\" on postgres_session: error\n\ncould not change directory to \"/home/vagrant\": Permission denied\n output ",
+      "message": "undefined method `output' for \"output\":String",
+      "exception": "NoMethodError",
+      "backtrace": [
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:115:in `block (3 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `each'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `inject'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:130:in `should_not'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-72889.rb:202:in `block (3 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Can't read run query \"SELECT current_setting('client_min_messages')\" on postgres_session: error\n\ncould not change directory to \"/home/vagrant\": Permission denied\n output ",
+      "message": "undefined method `output' for \"output\":String",
+      "exception": "NoMethodError",
+      "backtrace": [
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:115:in `block (3 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `each'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `inject'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:114:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-72889.rb:203:in `block (3 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_directory should eq \"pg_log\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_file_mode should eq \"0600\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration client_min_messages should cmp == \"error\""
+    },
+    {
+      "id": "V-72889",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data/pg_log -type f ! -perm 0600 | wc -l stdout.strip should eq \"0\""
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be directory"
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be owned by \"postgres\""
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data mode should cmp == \"0700\""
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "[\"stig_dba\", \"postgres\"] should include \"postgres\""
+    },
+    {
+      "id": "V-72891",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "[\"stig_dba\", \"postgres\"] should include \"stig_dba\""
+    },
+    {
+      "id": "V-72895",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration ssl should eq \"on\""
+    },
+    {
+      "id": "V-72895",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW ssl\" stdout.strip should match \"on\""
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72897",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "postgres should match /postgres|stig_dba/"
+    },
+    {
+      "id": "V-72989",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command cat /proc/sys/crypto/fips_enabled stdout.strip should eq \"1\"",
+      "message": "\nexpected: \"1\"\n     got: \"0\"\n\n(compared using ==)\n"
+    },
+    {
+      "id": "V-72993",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command cat /proc/sys/crypto/fips_enabled stdout.strip should eq \"1\"",
+      "message": "\nexpected: \"1\"\n     got: \"0\"\n\n(compared using ==)\n"
+    },
+    {
+      "id": "V-72995",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout should match /5432/",
+      "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+pgcrypto|1.2|1.2|cryptographic functions\n"
+    },
+    {
+      "id": "V-73001",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW shared_preload_libraries\" stdout.strip should match \"pg_audit\"",
+      "message": "expected \"pgaudit\" to match \"pg_audit\""
+    },
+    {
+      "id": "V-73001",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW logging_destination\" stdout.strip should match \"stderr|syslog\"",
+      "message": "expected \"\" to match \"stderr|syslog\""
+    },
+    {
+      "id": "V-73003",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout.strip should match \"stderr|syslog\"",
+      "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\" to match \"stderr|syslog\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%m\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%u\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%d\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%s\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%m\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%u\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%d\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%s\""
+    },
+    {
+      "id": "V-73005",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_hostname should eq \"on\""
+    },
+    {
+      "id": "V-73007",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"SELECT * from pg_extension where extname != 'plpgsql';\" | cut -d'|' -f 1 stdout.strip should match \"pgcrypto\""
+    },
+    {
+      "id": "V-73009",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"\\du\" stdout.strip should match \"error\"",
+      "message": "expected \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\" to match \"error\"\nDiff:\n@@ -1,2 +1,4 @@\n-error\n+postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\n+stig_dba|Superuser|{}\n+stig_user||{}\n"
+    },
+    {
+      "id": "V-73009",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c -c \"SELECT * FROM pg_available_extensions WHERE installed_version IS NOT\n  NULL\" stdout.strip should match \"error\"",
+      "message": "expected \"\" to match \"error\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be owned by \"postgres\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data should be grouped into \"postgres\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data ! -user postgres | wc -l stdout should cmp == 0"
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data ! -group postgres | wc -l stdout should cmp == 0"
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data/ ! -perm 600 -type f | wc -l stdout.strip should be <= 3",
+      "message": "expected: <= \"3\"\n     got:    \"4\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find /var/lib/pgsql/9.5/data/ ! -perm 700 -type d | wc -l stdout.strip should cmp == \"0\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5 should be owned by \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5 should be grouped into \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/bin should be owned by \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/bin should be grouped into \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/lib should be owned by \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/lib should be grouped into \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/share should be owned by \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /usr/pgsql-9.5/share should be grouped into \"root\""
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "File /usr/pgsql-9.5/share/contrib/pgaudit should be grouped into \"postgres\"",
+      "message": "expected `File /usr/pgsql-9.5/share/contrib/pgaudit.grouped_into?(\"postgres\")` to return true, got false"
+    },
+    {
+      "id": "V-73043",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "File /usr/pgsql-9.5/share/contrib/pgaudit should be owned by \"postgres\"",
+      "message": "expected `File /usr/pgsql-9.5/share/contrib/pgaudit.owned_by?(\"postgres\")` to return true, got false"
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_destination; output should eq \"syslog\""
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW syslog_facility; output should include \"local0\""
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration syslog_facility should cmp == \"local0\""
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW syslog_ident; output should eq \"postgres\""
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_destination should eq \"syslog\""
+    },
+    {
+      "id": "V-73045",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration syslog_ident should cmp == \"postgres\""
+    },
+    {
+      "id": "V-73047",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW ssl; output should eq \"on\""
+    },
+    {
+      "id": "V-73047",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration ssl should cmp == \"on\""
+    },
+    {
+      "id": "V-73049",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Operating System Detection",
+      "skip_message": "Skipped control due to only_if condition.",
+      "resource": "Operating System Detection"
+    },
+    {
+      "id": "V-73051",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Operating System Detection",
+      "skip_message": "Skipped control due to only_if condition.",
+      "resource": "Operating System Detection"
+    },
+    {
+      "id": "V-73053",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Operating System Detection",
+      "skip_message": "Skipped control due to only_if condition.",
+      "resource": "Operating System Detection"
+    },
+    {
+      "id": "V-73055",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Operating System Detection",
+      "skip_message": "Skipped control due to only_if condition.",
+      "resource": "Operating System Detection"
+    },
+    {
+      "id": "V-73057",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Operating System Detection",
+      "skip_message": "Skipped control due to only_if condition.",
+      "resource": "Operating System Detection"
+    },
+    {
+      "id": "V-73059",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command find PG_DATA_DIR ! -user PG_OWNER ! -group PG_GROUP -type f -readable -writable | wc -l stdout.strip should eq \"0\""
+    },
+    {
+      "id": "V-73061",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_file_mode; output should eq \"0600\""
+    },
+    {
+      "id": "V-73061",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_file_mode should eq \"0600\""
+    },
+    {
+      "id": "V-73061",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "File /var/lib/pgsql/9.5/data/postgresql.conf mode should cmp == \"0600\""
+    },
+    {
+      "id": "V-73063",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "Command /bin/openssl version stdout should include \"fips\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW shared_preload_libraries; output should eq \"pgaudit\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"ddl\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"role\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"read\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"write\""
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73065.rb:128:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73065.rb:128:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73065.rb:128:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73065",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73065.rb:128:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW shared_preload_libraries; output should eq \"pgaudit\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"ddl\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"role\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"read\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW pgaudit.log; output should include \"write\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_connections should cmp == \"on\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73067.rb:160:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73067.rb:160:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73067.rb:160:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73067.rb:160:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%m\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%u\""
+    },
+    {
+      "id": "V-73067",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%c\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW shared_preload_libraries; output should eq \"pgaudit\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_connections; output should eq \"on\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_disconnections; output should eq \"on\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_connections should eq \"on\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_disconnections should eq \"on\""
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log_parameter\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73069.rb:142:in `block (3 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73069.rb:147:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73069.rb:147:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73069.rb:147:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73069",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "PostgreSQL Configuration [\"pgaudit.log\"] ",
+      "message": "wrong number of arguments (given 2, expected 1)",
+      "exception": "ArgumentError",
+      "backtrace": [
+        "/Users/aaronl/Desktop/inspec/lib/resources/postgres_conf.rb:45:in `method_missing'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:110:in `block (2 levels) in its'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block (2 levels) in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (3 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:157:in `block (2 levels) in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-support-3.6.0/lib/rspec/support/reentrant_mutex.rb:23:in `synchronize'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:156:in `block in fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:155:in `fetch_or_store'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/memoized_helpers.rb:298:in `block in let'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-its-1.2.0/lib/rspec/its.rb:126:in `should'",
+        "/Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/./V-73069.rb:147:in `block (4 levels) in load_with_context'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `instance_exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:254:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:602:in `run_around_example_hooks_for'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/hooks.rb:464:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:457:in `with_around_example_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example.rb:251:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:627:in `block in run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:623:in `run_examples'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:589:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `block in run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/example_group.rb:590:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `map'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/configuration.rb:1894:in `with_suite_hooks'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:113:in `block in run_specs'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/reporter.rb:79:in `report'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/rspec-core-3.6.0/lib/rspec/core/runner.rb:112:in `run_specs'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner_rspec.rb:77:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:117:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/runner.rb:101:in `run'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/base_cli.rb:83:in `run_tests'",
+        "/Users/aaronl/Desktop/inspec/lib/inspec/cli.rb:159:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor.rb:359:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/thor-0.19.1/lib/thor/base.rb:440:in `start'",
+        "bin/inspec:12:in `<top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:74:in `kernel_load'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli/exec.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:360:in `exec'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:20:in `dispatch'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/cli.rb:10:in `start'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:35:in `block in <top (required)>'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'",
+        "/usr/local/lib/ruby/gems/2.4.0/gems/bundler-1.15.1/exe/bundle:27:in `<top (required)>'",
+        "/usr/local/bin/bundle:22:in `load'",
+        "/usr/local/bin/bundle:22:in `<main>'"
+      ]
+    },
+    {
+      "id": "V-73071",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "redhat should eq \"redhat\""
+    },
+    {
+      "id": "V-73071",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "failed",
+      "code_desc": "Kernel Parameter fips value should eq \"1\"",
+      "message": "\nexpected: \"1\"\n     got: nil\n\n(compared using ==)\n"
+    },
+    {
+      "id": "V-73071",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "skipped",
+      "code_desc": "Parse Config File /etc/sysconfig/prelink",
+      "skip_message": "Can't find file \"/etc/sysconfig/prelink\"",
+      "resource": "Parse Config File /etc/sysconfig/prelink"
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_line_prefix; output should include \"%m\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_line_prefix; output should include \"%u\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_line_prefix; output should include \"%d\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL query: SHOW log_line_prefix; output should include \"%s\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%m\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%u\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%d\""
+    },
+    {
+      "id": "V-73123",
+      "profile_id": "tests from /Users/aaronl/Desktop/hardening/crunchydata/postgresql-baseline/controls/.",
+      "status": "passed",
+      "code_desc": "PostgreSQL Configuration log_line_prefix should include \"%s\""
+    }
+  ],
+  "statistics": {
+    "duration": 2.235957
+  }
+}

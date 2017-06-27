@@ -1,0 +1,22 @@
+<guitars title="My Guitars">
+   <make name="Fender">
+      <model sn="123456789" year="2006" country="japan">
+         <name>62 Reissue Stratocaster</name>
+         <price>750.00</price>
+         <color>Fiesta Red</color>
+      </model>
+      <model sn="112233445" year="2006" country="mexico">
+         <name>60s Reverse Headstock Stratocaster</name>
+         <price>699.00</price>
+         <color>Olympic White</color>
+      </model>
+   </make>
+   <make name="Squier">
+      <model sn="445322344" year="2003" country="China">
+         <name>Standard Stratocaster</name>
+         <price>179.99</price>
+         <color>Cherry Sunburst</color>
+      </model>
+   </make>
+
+</guitars>
