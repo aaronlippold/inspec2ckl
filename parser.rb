@@ -3,7 +3,6 @@ require 'rubygems'
 require 'json'
 require 'pp'
 require 'nokogiri'
-require 'hashie/mash'
 
 # filename = 'exam.xml'
 # xml = File.read(filename)
@@ -22,17 +21,23 @@ json = File.read('file2.json')
 #   puts "#{vnumber}: is #{status}"
 # end
 
-file = JSON.parse(json)
+def parse_inspec_json(json)
+  file = JSON.parse(json)
+  controls = file['profiles'][0]['controls']
+  data = {}
 
-profiles = file['profiles'][0]['controls']
-
-profiles.each do |x|
-  #results = x['results']
-  tags = x['tags']
-  puts x['status']
-  puts x['impact']
-  puts tags['severity']
+  controls.each do |control|
+    gid = control['tags']['gid']
+    data[gid] = {}
+    data[gid]['impact'] = control['impact']
+    data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
+  end
+  data
 end
+
+myjson = parse_inspec_json(json)
+
+pp myjson['V-73015']['impact']
 
 def find_status_by_vuln(vuln)
   nodes = @norgi.search "[text()*='#{vuln}']"
@@ -60,11 +65,6 @@ end
 
 #xml.elements.each('CHECKLIST/STIGS/iSTIG/VULN/STIG_DATA/ATTRIBUTE_DATA') { |element| puts element.text if element.text =~ /^V-.*/ }
 
-  def parse_inspec_json(json)
-    obj = JSON.parse(json)
-    obj['profiles']['controls']
-  end
-
   def map_controls(controls)
     controls.each do |x|
       if x['status'].match('passed')
@@ -73,6 +73,7 @@ end
         puts "#{x['id']} should be set to 'Finding'"
       elsif x['status'].match('skipped')
         puts "#{x['id']} should be set to 'Not Evaluated'"
+      # case where control impact == 0 => NotAppliciable
       else x['status'].match('z')
         puts "#{x['id']} should be set to 'z'"
       end
