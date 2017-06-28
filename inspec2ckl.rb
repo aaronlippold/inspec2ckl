@@ -82,8 +82,6 @@ def inspec_status_to_clk_status(vuln, json_results)
     result = 'NotAFinding'
   when 'failed'
     result = 'Open'
-  when 'nil'
-    result = 'Not_Reviewed'
   when 'skipped'
     result = 'Not_Reviewed'
   end
