@@ -3,28 +3,87 @@ require 'rubygems'
 require 'json'
 require 'pp'
 require 'nokogiri'
+require 'optparse'
 
-  # filename = 'exam.xml'
-  # xml = File.read(filename)
-  # doc = Nokogiri::XML(xml)
-  # # ... make changes to doc ...
-  # File.write(filename, doc.to_xml)
+# filename = 'exam.xml'
+# xml = File.read(filename)
+# doc = Nokogiri::XML(xml)
+# # ... make changes to doc ...
+# File.write(filename, doc.to_xml)
+#  cat file2.json | jq '.profiles[].controls[] | "\(.impact) \(.tags.gid)"'
 
-  #  cat file2.json | jq '.profiles[].controls[] | "\(.impact) \(.tags.gid)"'
+script_version = '1.0'
 
-json = File.read('file2.json')
-@norgi = Nokogiri::XML(File.open('test.ckl'))
+options = { ckl_file: nil, json_file: nil, output: nil }
 
-def find_status_by_vuln(vuln)
-  nodes = @norgi.search "[text()*='#{vuln}']"
-  node = nodes.first
-  puts node.parent.parent.xpath('./STATUS').text
+parser = OptionParser.new do |opts|
+  opts.banner = 'Usage: inspec2ckl.rb [options]'
+  opts.on('-c',
+          '--ckl ckl_file',
+          'the path to the DISA Checklist file') do |ckl|
+    options[:ckl] = ckl
+  end
+  opts.on('-j',
+          '--json json_file',
+          'the path to the InSpec JSON results file') do |json|
+    options[:json] = json
+  end
+  opts.on('-o',
+          '--output results.ckl',
+          'The file name you want for the output file (results.ckl)') do |output|
+    options[:output] = output
+  end
+
+  opts.on('-v',
+          '--version',
+          'inspec2ckl version') do
+    puts 'inspec2ckl: v' + script_version.to_s
+    exit
+  end
+  opts.on('-h',
+          '--help',
+          'Displays Help') do
+    puts opts
+    exit
+  end
 end
 
-def set_status_by_vuln(vuln,status)
-  nodes = @norgi.search "[text()*='#{vuln}']"
+parser.parse!
+
+
+if options[:ckl].nil?
+  print 'Enter the path to the base DISA Checklist file (required): '
+  options[:ckl] = gets.chomp
+end
+
+if options[:json].nil?
+  print 'Enter the path to your InSpec JSON full results file (required): '
+  options[:json] = gets.chomp
+end
+
+if options[:output].nil?
+  puts 'The results will be placed in the file - `results.ckl`: '
+  options[:output] = 'results.ckl'
+else
+  puts "The results will be placed in the file - `#{options[:output]}`: "
+end
+
+puts json_file = options[:json].to_s
+puts ckl_file = options[:ckl].to_s
+puts results = options[:output].to_s
+
+inspec_json = File.read(json_file)
+disa_xml = Nokogiri::XML(File.open(ckl_file))
+
+def find_status_by_vuln(vuln,xml)
+  nodes = xml.search "[text()*='#{vuln}']"
   node = nodes.first
-  current_status = node.parent.parent.xpath('./STATUS')
+  node.parent.parent.xpath('./STATUS').text
+end
+
+def set_status_by_vuln(vuln,status,xml)
+  nodes = xml.search "[text()*='#{vuln}']"
+  node = nodes.first
   node.parent.parent.at('./STATUS').content = status
 end
 
@@ -51,16 +110,15 @@ def parse_json(json)
   data
 end
 
-@test_results = parse_json(json)
-@norgi.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
-  vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
-  status = vul.xpath('./STATUS').text
-  next if vnumber == "V-72987"
-  new_status = inspec_status_to_clk_status("#{vnumber}", @test_results)
-  set_status_by_vuln(vnumber, new_status)
+def update_ckl_file(disa_xml, parsed_json)
+  disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
+    vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
+    next if vnumber == "V-72987"
+    new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
+    set_status_by_vuln(vnumber, new_status,disa_xml)
+  end
 end
 
-File.write('results.ckl', @norgi.to_xml)
-
-# puts x = parse_inspec_json(json)
-# map_controls(x)
+test_results = parse_json(inspec_json)
+update_ckl_file(disa_xml, test_results)
+File.write(results, disa_xml.to_xml)
