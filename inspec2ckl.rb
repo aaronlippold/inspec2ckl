@@ -102,7 +102,7 @@ def parse_json(json)
   controls = file['profiles'][0]['controls']
   data = {}
   controls.each do |control|
-    gid = control['tags']['gid']
+    gid = control['id']
     data[gid] = {}
     data[gid]['impact'] = "#{control['impact']}"
     data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
@@ -113,7 +113,6 @@ end
 def update_ckl_file(disa_xml, parsed_json)
   disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
     vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
-    next if vnumber == "V-72987"
     new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
     set_status_by_vuln(vnumber, new_status,disa_xml)
   end
