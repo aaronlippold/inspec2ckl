@@ -75,24 +75,29 @@ puts results = options[:output].to_s
 inspec_json = File.read(json_file)
 disa_xml = Nokogiri::XML(File.open(ckl_file))
 
-def find_status_by_vuln(vuln,xml)
+def find_status_by_vuln(vuln, xml)
   nodes = xml.search "[text()*='#{vuln}']"
   node = nodes.first
   node.parent.parent.xpath('./STATUS').text
 end
 
-def set_status_by_vuln(vuln,status,xml)
+def set_status_by_vuln(vuln, status, xml)
   nodes = xml.search "[text()*='#{vuln}']"
   node = nodes.first
   node.parent.parent.at('./STATUS').content = status
 end
 
 def inspec_status_to_clk_status(vuln, json_results)
-  result = nil
-  result = 'NotAFinding' if json_results[vuln]['status'] == 'passed'
-  result = 'Open' if json_results[vuln]['status'] == 'failed'
-  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'nil'
-  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'skipped'
+  case json_results[vuln]['status']
+  when 'passed'
+    result = 'NotAFinding'
+  when 'failed'
+    result = 'Open'
+  when 'nil'
+    result = 'Not_Reviewed'
+  when 'skipped'
+    result = 'Not_Reviewed'
+  end
   result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
   result
 end
@@ -104,7 +109,7 @@ def parse_json(json)
   controls.each do |control|
     gid = control['id']
     data[gid] = {}
-    data[gid]['impact'] = "#{control['impact']}"
+    data[gid]['impact'] = control['impact'].to_s
     data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
   end
   data
@@ -114,7 +119,7 @@ def update_ckl_file(disa_xml, parsed_json)
   disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
     vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
     new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
-    set_status_by_vuln(vnumber, new_status,disa_xml)
+    set_status_by_vuln(vnumber, new_status, disa_xml)
   end
 end
 
