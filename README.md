@@ -4,7 +4,7 @@ A small parser to take the JSON full output of an InSpec profile results and upd
 # Usage
 ## Command Line
 ```
-#> ruby xccdf2inspec.rb --help
+#> ruby inspec2ckl.rb --help
 Usage: inspec2ckl.rb [options]
     -c, --ckl ckl_file               the path to the DISA Checklist file
     -j, --json json_file             the path to the InSpec JSON results file
