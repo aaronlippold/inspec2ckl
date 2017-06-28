@@ -82,8 +82,6 @@ def inspec_status_to_clk_status(vuln, json_results)
     result = 'NotAFinding'
   when 'failed'
     result = 'Open'
-  when 'nil'
-    result = 'Not_Reviewed'
   when 'skipped'
     result = 'Not_Reviewed'
   end
@@ -100,6 +98,7 @@ def parse_json(json)
     data[gid] = {}
     data[gid]['impact'] = control['impact'].to_s
     data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
+    # @todo:  Figure out usecases for multiple statuses of pass or skip
   end
   data
 end
