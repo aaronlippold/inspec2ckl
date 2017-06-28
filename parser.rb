@@ -15,12 +15,6 @@ require 'nokogiri'
 json = File.read('file2.json')
 @norgi = Nokogiri::XML(File.open('test.ckl'))
 
-# @norgi.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
-#   vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
-#   status = vul.xpath('./STATUS').text
-#   puts "#{vnumber}: is #{status}"
-# end
-
 def find_status_by_vuln(vuln)
   nodes = @norgi.search "[text()*='#{vuln}']"
   node = nodes.first
@@ -35,11 +29,13 @@ def set_status_by_vuln(vuln,status)
 end
 
 def inspec_status_to_clk_status(vuln, json_results)
-  puts 'Not A Finding' if json_results[vuln]['status'] == 'passed'
-  puts 'Finding' if json_results[vuln]['status'] == 'failed'
-  puts 'Not Evaluated(nil)' if json_results[vuln]['status'] == 'nil'
-  puts 'Not Evaluated' if json_results[vuln]['status'] == 'skipped'
-  puts 'Not Applicable' if json_results[vuln]['imapct'] == '0'
+  result = nil
+  result = 'NotAFinding' if json_results[vuln]['status'] == 'passed'
+  result = 'Open' if json_results[vuln]['status'] == 'failed'
+  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'nil'
+  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'skipped'
+  result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
+  result
 end
 
 def parse_json(json)
@@ -49,17 +45,22 @@ def parse_json(json)
   controls.each do |control|
     gid = control['tags']['gid']
     data[gid] = {}
-    data[gid]['impact'] = control['impact']
+    data[gid]['impact'] = "#{control['impact']}"
     data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
   end
   data
 end
 
-test_results = parse_json(json)
-
-test_results.keys.each do |vuln|
-  inspec_status_to_clk_status(vuln, test_results)
+@test_results = parse_json(json)
+@norgi.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
+  vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
+  status = vul.xpath('./STATUS').text
+  next if vnumber == "V-72987"
+  new_status = inspec_status_to_clk_status("#{vnumber}", @test_results)
+  set_status_by_vuln(vnumber, new_status)
 end
+
+File.write('results.ckl', @norgi.to_xml)
 
 # puts x = parse_inspec_json(json)
 # map_controls(x)
