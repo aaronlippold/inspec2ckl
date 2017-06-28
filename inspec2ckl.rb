@@ -1,17 +1,8 @@
 #!/usr/bin/ruby
 require 'rubygems'
 require 'json'
-require 'pp'
 require 'nokogiri'
 require 'optparse'
-
-# filename = 'exam.xml'
-# xml = File.read(filename)
-# doc = Nokogiri::XML(xml)
-# # ... make changes to doc ...
-# File.write(filename, doc.to_xml)
-#  cat file2.json | jq '.profiles[].controls[] | "\(.impact) \(.tags.gid)"'
-
 script_version = '1.0'
 
 options = { ckl_file: nil, json_file: nil, output: nil }
@@ -21,19 +12,18 @@ parser = OptionParser.new do |opts|
   opts.on('-c',
           '--ckl ckl_file',
           'the path to the DISA Checklist file') do |ckl|
-    options[:ckl] = ckl
-  end
+            options[:ckl] = ckl
+          end
   opts.on('-j',
           '--json json_file',
           'the path to the InSpec JSON results file') do |json|
-    options[:json] = json
-  end
+            options[:json] = json
+          end
   opts.on('-o',
           '--output results.ckl',
           'The file name you want for the output file (results.ckl)') do |output|
-    options[:output] = output
-  end
-
+            options[:output] = output
+          end
   opts.on('-v',
           '--version',
           'inspec2ckl version') do
@@ -49,7 +39,6 @@ parser = OptionParser.new do |opts|
 end
 
 parser.parse!
-
 
 if options[:ckl].nil?
   print 'Enter the path to the base DISA Checklist file (required): '
