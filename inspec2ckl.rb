@@ -88,11 +88,16 @@ def set_status_by_vuln(vuln,status,xml)
 end
 
 def inspec_status_to_clk_status(vuln, json_results)
-  result = nil
-  result = 'NotAFinding' if json_results[vuln]['status'] == 'passed'
-  result = 'Open' if json_results[vuln]['status'] == 'failed'
-  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'nil'
-  result = 'Not_Reviewed' if json_results[vuln]['status'] == 'skipped'
+  case json_results[vuln]['status']
+  when 'passed'
+    result = 'NotAFinding'
+  when 'failed'
+    result = 'Open'
+  when 'nil'
+    result = 'Not_Reviewed'
+  when 'skipped'
+    result = 'Not_Reviewed'
+  end
   result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
   result
 end
