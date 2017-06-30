@@ -3,7 +3,8 @@ require 'rubygems'
 require 'json'
 require 'nokogiri'
 require 'optparse'
-script_version = '1.0'
+require 'date'
+script_version = '1.1'
 
 options = { ckl_file: nil, json_file: nil, output: nil }
 
@@ -25,9 +26,14 @@ parser = OptionParser.new do |opts|
             options[:output] = output
           end
   opts.on('-m,',
-          '--message "mesg"',
+          '--message "mesg"', String,
           'A message to add to the control\'s "comments" section (optional)') do |mesg|
             options[:mesg] = mesg
+          end
+  opts.on('-V,',
+          '--verbose',
+          'Show me the data!!! (true|*false)') do |verbose|
+            options[:verbose] = verbose
           end
   opts.on('-v',
           '--version',
@@ -58,14 +64,23 @@ end
 if options[:output].nil?
   puts 'The results will be placed in the file - `results.ckl`: '
   options[:output] = 'results.ckl'
-else
-  puts "The results will be placed in the file - `#{options[:output]}`: "
 end
 
-puts json_file = options[:json].to_s
-puts ckl_file = options[:ckl].to_s
-puts results = options[:output].to_s
-puts @comment_mesg = options[:mesg].to_s || 'Automated compliance tests brought to you by the MITRE corp, CrunchyDB and the InSpec Project.'
+json_file = options[:json].to_s
+ckl_file = options[:ckl].to_s
+results = options[:output].to_s
+@comment_mesg = options[:mesg] || 'Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.'
+@verbose = options[:verbose] || false
+@count = 0
+
+if @verbose
+  puts '=========='
+  puts "Parsing the InSpec Results from: #{json_file}"
+  puts "Creating a new DISA Checklist file: #{results}"
+  puts '-------'
+  puts "using #{ckl_file} as a base"
+  puts '=========='
+end
 
 inspec_json = File.read(json_file)
 disa_xml = Nokogiri::XML(File.open(ckl_file))
@@ -83,18 +98,16 @@ def set_status_by_vuln(vuln, status, xml, msg = "")
   # an if status = 'bad thing' then status = "Not Reviewed" ??
   node.parent.parent.at('./STATUS').content = status
   if !msg.empty?
+    time = Time.now
     content = node.parent.parent.at('./COMMENTS').content
     if content.empty?
-      content = @comment_msg
+      content = "#{time}: #{@comment_mesg}"
     else
-      content << "\n\n . @comment_msg"
+      content << "\n#{time}: #{@comment_mesg}"
     end
     node.parent.parent.at('./COMMENTS').content = content
   end
 end
-
-# @todo add a case when we don't have a 'results array' => 'Not Reviewed'
-# @todo add a 'Automated Tests brought to you by MITRE, CrunchyDB and InSpec' to the control comments.
 
 def inspec_status_to_clk_status(vuln, json_results)
   status_list = json_results[vuln]['status'].uniq
@@ -102,29 +115,19 @@ def inspec_status_to_clk_status(vuln, json_results)
     when status_list.include?('failed') then 'Open'
     when status_list.include?('passed') then 'NotAFinding'
     when status_list.include?('skipped') then 'Not_Reviewed'
-    else 'empty' # some controls are still coming in without results
+    else 'Not_Reviewed' # in case some controls come back with no results
   end
   result = 'Not_Applicable' if json_results[vuln]['impact'] == '0.0'
+  puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
   result
 end
-# def inspec_status_to_clk_status(vuln, json_results)
-#   case json_results[vuln]['status'].uniq
-#   when 'passed'
-#     result = 'NotAFinding'
-#   when 'failed'
-#     result = 'Open'
-#   when 'skipped'
-#     result = 'Not_Reviewed'
-#   end
-#   result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
-#   result
-# end
 
 def parse_json(json)
   file = JSON.parse(json)
   controls = file['profiles'][0]['controls']
   data = {}
   controls.each do |control|
+    @count += 1
     gid = control['id']
     data[gid] = {}
     data[gid]['impact'] = control['impact'].to_s
@@ -143,10 +146,11 @@ def update_ckl_file(disa_xml, parsed_json)
   disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
     vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
     new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
-    set_status_by_vuln(vnumber, new_status, disa_xml, @comment_mesg.to_s)
+    set_status_by_vuln(vnumber, new_status, disa_xml, @comment_mesg)
   end
 end
 
 test_results = parse_json(inspec_json)
 update_ckl_file(disa_xml, test_results)
 File.write(results, disa_xml.to_xml)
+puts "Processed #{@count} controls"

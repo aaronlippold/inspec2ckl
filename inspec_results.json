@@ -3,7 +3,7 @@
   "controls": [
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW port\" stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW port\" stdout should match /5432/",
       "run_time": 0.047133,
       "start_time": "2017-06-26 22:51:56 -0400"
     },
@@ -291,35 +291,35 @@
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"\\df+\" stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"\\df+\" stdout should match /5432/",
       "run_time": 0.128563,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected \"public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\\npublic|armor|text|bytea, text...m_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,37 @@\n-/5432/\n+public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|armor|text|bytea, text[], text[]|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|crypt|text|text, text|normal|invoker|immutable|stig_dba|c|pg_crypt|\n+public|dearmor|bytea|text|normal|invoker|immutable|stig_dba|c|pg_dearmor|\n+public|decrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt|\n+public|decrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt_iv|\n+public|digest|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|digest|bytea|text, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|encrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt|\n+public|encrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt_iv|\n+public|gen_random_bytes|bytea|integer|normal|invoker|volatile|stig_dba|c|pg_random_bytes|\n+public|gen_random_uuid|uuid||normal|invoker|volatile|stig_dba|c|pg_random_uuid|\n+public|gen_salt|text|text|normal|invoker|volatile|stig_dba|c|pg_gen_salt|\n+public|gen_salt|text|text, integer|normal|invoker|volatile|stig_dba|c|pg_gen_salt_rounds|\n+public|hmac|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|hmac|bytea|text, text, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|pgp_armor_headers|SETOF record|text, OUT key text, OUT value text|normal|invoker|immutable|stig_dba|c|pgp_armor_headers|\n+public|pgp_key_id|text|bytea|normal|invoker|immutable|stig_dba|c|pgp_key_id_w|\n+public|pgp_pub_decrypt|text|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_encrypt|bytea|text, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt|bytea|text, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_sym_decrypt|text|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt|text|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_encrypt|bytea|text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt|bytea|text, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'du' stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'du' stdout should match /5432/",
       "run_time": 0.043517,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'dp' stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'dp' stdout should match /5432/",
       "run_time": 0.043695,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c '\\d+ <schema_name>.<table_name>' stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c '\\d+ <schema_name>.<table_name>' stdout should match /5432/",
       "run_time": 0.054498,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW max_connections\" stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW max_connections\" stdout.strip should be <= 100",
       "run_time": 0.049302,
       "start_time": "2017-06-26 22:51:57 -0400"
     },
@@ -368,49 +368,49 @@
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\dp *.*\" stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\dp *.*\" stdout.strip should be <= 100",
       "run_time": 0.059947,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|||\\ninformation_schema|_pg_foreign_servers|view|||...appings|view|=r/postgres||\\npg_catalog|pg_views|view|=r/postgres||\\npublic|stig_test_table|table|||\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\du\" stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\du\" stdout.strip should be <= 100",
       "run_time": 0.048975,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dn *.*' stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dn *.*' stdout.strip should be <= 100",
       "run_time": 0.048587,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"information_schema|postgres\\npg_catalog|postgres\\npg_temp_1|postgres\\npg_toast|postgres\\npg_toast_temp_1|postgres\\npublic|postgres\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dt *.*' stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dt *.*' stdout.strip should be <= 100",
       "run_time": 0.049165,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"information_schema|sql_features|table|postgres\\ninformation_schema|sql_implementation_info|table|pos...e|table|postgres\\npg_catalog|pg_user_mapping|table|postgres\\npublic|stig_test_table|table|stig_user\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\ds *.*' stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\ds *.*' stdout.strip should be <= 100",
       "run_time": 0.051127,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"No matching relations found.\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dv *.*' stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dv *.*' stdout.strip should be <= 100",
       "run_time": 0.0501,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|postgres\\ninformation_schema|_pg_foreign_servers|v...pg_user|view|postgres\\npg_catalog|pg_user_mappings|view|postgres\\npg_catalog|pg_views|view|postgres\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\df+ *.*' stdout.strip should be <= 100",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\df+ *.*' stdout.strip should be <= 100",
       "run_time": 0.476542,
       "start_time": "2017-06-26 22:51:57 -0400",
       "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_char_max_length|integer|typid oid, typmod integer|normal|invoker|immutable|po...sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\""
@@ -709,7 +709,7 @@
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW ssl\" stdout.strip should match \"on\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW ssl\" stdout.strip should match \"on\"",
       "run_time": 0.043122,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
@@ -1401,53 +1401,53 @@
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout should match /5432/",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout should match /5432/",
       "run_time": 0.044414,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+pgcrypto|1.2|1.2|cryptographic functions\n"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW shared_preload_libraries\" stdout.strip should match \"pg_audit\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW shared_preload_libraries\" stdout.strip should match \"pg_audit\"",
       "run_time": 0.044004,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"pgaudit\" to match \"pg_audit\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW logging_destination\" stdout.strip should match \"stderr|syslog\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW logging_destination\" stdout.strip should match \"stderr|syslog\"",
       "run_time": 0.045833,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"\" to match \"stderr|syslog\""
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout.strip should match \"stderr|syslog\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout.strip should match \"stderr|syslog\"",
       "run_time": 0.045438,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\" to match \"stderr|syslog\""
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%m\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%m\"",
       "run_time": 0.04399,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%u\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%u\"",
       "run_time": 0.043678,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%d\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%d\"",
       "run_time": 0.05056,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%s\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%s\"",
       "run_time": 0.04808,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
@@ -1483,20 +1483,20 @@
     },
     {
       "status": "passed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"SELECT * from pg_extension where extname != 'plpgsql';\" | cut -d'|' -f 1 stdout.strip should match \"pgcrypto\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"SELECT * from pg_extension where extname != 'plpgsql';\" | cut -d'|' -f 1 stdout.strip should match \"pgcrypto\"",
       "run_time": 8.8e-05,
       "start_time": "2017-06-26 22:51:58 -0400"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"\\du\" stdout.strip should match \"error\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"\\du\" stdout.strip should match \"error\"",
       "run_time": 0.048923,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\" to match \"error\"\nDiff:\n@@ -1,2 +1,4 @@\n-error\n+postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\n+stig_dba|Superuser|{}\n+stig_user||{}\n"
     },
     {
       "status": "failed",
-      "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c -c \"SELECT * FROM pg_available_extensions WHERE installed_version IS NOT\n  NULL\" stdout.strip should match \"error\"",
+      "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c -c \"SELECT * FROM pg_available_extensions WHERE installed_version IS NOT\n  NULL\" stdout.strip should match \"error\"",
       "run_time": 0.047331,
       "start_time": "2017-06-26 22:51:58 -0400",
       "message": "expected \"\" to match \"error\""
@@ -2872,7 +2872,7 @@
           "results": [
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW port\" stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW port\" stdout should match /5432/",
               "run_time": 0.047133,
               "start_time": "2017-06-26 22:51:56 -0400"
             }
@@ -3350,7 +3350,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"\\df+\" stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"\\df+\" stdout should match /5432/",
               "run_time": 0.128563,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected \"public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\\npublic|armor|text|bytea, text...m_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,37 @@\n-/5432/\n+public|armor|text|bytea|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|armor|text|bytea, text[], text[]|normal|invoker|immutable|stig_dba|c|pg_armor|\n+public|crypt|text|text, text|normal|invoker|immutable|stig_dba|c|pg_crypt|\n+public|dearmor|bytea|text|normal|invoker|immutable|stig_dba|c|pg_dearmor|\n+public|decrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt|\n+public|decrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_decrypt_iv|\n+public|digest|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|digest|bytea|text, text|normal|invoker|immutable|stig_dba|c|pg_digest|\n+public|encrypt|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt|\n+public|encrypt_iv|bytea|bytea, bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_encrypt_iv|\n+public|gen_random_bytes|bytea|integer|normal|invoker|volatile|stig_dba|c|pg_random_bytes|\n+public|gen_random_uuid|uuid||normal|invoker|volatile|stig_dba|c|pg_random_uuid|\n+public|gen_salt|text|text|normal|invoker|volatile|stig_dba|c|pg_gen_salt|\n+public|gen_salt|text|text, integer|normal|invoker|volatile|stig_dba|c|pg_gen_salt_rounds|\n+public|hmac|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|hmac|bytea|text, text, text|normal|invoker|immutable|stig_dba|c|pg_hmac|\n+public|pgp_armor_headers|SETOF record|text, OUT key text, OUT value text|normal|invoker|immutable|stig_dba|c|pgp_armor_headers|\n+public|pgp_key_id|text|bytea|normal|invoker|immutable|stig_dba|c|pgp_key_id_w|\n+public|pgp_pub_decrypt|text|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt|text|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_text|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_decrypt_bytea|bytea|bytea, bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_pub_decrypt_bytea|\n+public|pgp_pub_encrypt|bytea|text, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt|bytea|text, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_text|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_pub_encrypt_bytea|bytea|bytea, bytea, text|normal|invoker|volatile|stig_dba|c|pgp_pub_encrypt_bytea|\n+public|pgp_sym_decrypt|text|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt|text|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_text|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_decrypt_bytea|bytea|bytea, text, text|normal|invoker|immutable|stig_dba|c|pgp_sym_decrypt_bytea|\n+public|pgp_sym_encrypt|bytea|text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt|bytea|text, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_text|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n+public|pgp_sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\n"
@@ -3411,14 +3411,14 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'du' stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'du' stdout should match /5432/",
               "run_time": 0.043517,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'dp' stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c 'dp' stdout should match /5432/",
               "run_time": 0.043695,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
@@ -3453,7 +3453,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c '\\d+ <schema_name>.<table_name>' stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c '\\d+ <schema_name>.<table_name>' stdout should match /5432/",
               "run_time": 0.054498,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected \"\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+\"\"\n"
@@ -3488,7 +3488,7 @@
           "results": [
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW max_connections\" stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW max_connections\" stdout.strip should be <= 100",
               "run_time": 0.049302,
               "start_time": "2017-06-26 22:51:57 -0400"
             },
@@ -3565,7 +3565,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\dp *.*\" stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\dp *.*\" stdout.strip should be <= 100",
               "run_time": 0.059947,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|||\\ninformation_schema|_pg_foreign_servers|view|||...appings|view|=r/postgres||\\npg_catalog|pg_views|view|=r/postgres||\\npublic|stig_test_table|table|||\""
@@ -3600,7 +3600,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\du\" stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"\\du\" stdout.strip should be <= 100",
               "run_time": 0.048975,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\""
@@ -3765,35 +3765,35 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dn *.*' stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dn *.*' stdout.strip should be <= 100",
               "run_time": 0.048587,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"information_schema|postgres\\npg_catalog|postgres\\npg_temp_1|postgres\\npg_toast|postgres\\npg_toast_temp_1|postgres\\npublic|postgres\""
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dt *.*' stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dt *.*' stdout.strip should be <= 100",
               "run_time": 0.049165,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"information_schema|sql_features|table|postgres\\ninformation_schema|sql_implementation_info|table|pos...e|table|postgres\\npg_catalog|pg_user_mapping|table|postgres\\npublic|stig_test_table|table|stig_user\""
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\ds *.*' stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\ds *.*' stdout.strip should be <= 100",
               "run_time": 0.051127,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"No matching relations found.\""
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dv *.*' stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\dv *.*' stdout.strip should be <= 100",
               "run_time": 0.0501,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_foreign_data_wrappers|view|postgres\\ninformation_schema|_pg_foreign_servers|v...pg_user|view|postgres\\npg_catalog|pg_user_mappings|view|postgres\\npg_catalog|pg_views|view|postgres\""
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\df+ *.*' stdout.strip should be <= 100",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c '\\df+ *.*' stdout.strip should be <= 100",
               "run_time": 0.476542,
               "start_time": "2017-06-26 22:51:57 -0400",
               "message": "expected: <= \"100\"\n     got:    \"information_schema|_pg_char_max_length|integer|typid oid, typmod integer|normal|invoker|immutable|po...sym_encrypt_bytea|bytea|bytea, text, text|normal|invoker|volatile|stig_dba|c|pgp_sym_encrypt_bytea|\""
@@ -4256,7 +4256,7 @@
             },
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW ssl\" stdout.strip should match \"on\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -t -A -c \"SHOW ssl\" stdout.strip should match \"on\"",
               "run_time": 0.043122,
               "start_time": "2017-06-26 22:51:58 -0400"
             }
@@ -6142,7 +6142,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout should match /5432/",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout should match /5432/",
               "run_time": 0.044414,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\\n\" to match /5432/\nDiff:\n@@ -1,2 +1,2 @@\n-/5432/\n+pgcrypto|1.2|1.2|cryptographic functions\n"
@@ -6229,14 +6229,14 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW shared_preload_libraries\" stdout.strip should match \"pg_audit\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW shared_preload_libraries\" stdout.strip should match \"pg_audit\"",
               "run_time": 0.044004,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"pgaudit\" to match \"pg_audit\""
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW logging_destination\" stdout.strip should match \"stderr|syslog\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SHOW logging_destination\" stdout.strip should match \"stderr|syslog\"",
               "run_time": 0.045833,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"\" to match \"stderr|syslog\""
@@ -6271,7 +6271,7 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout.strip should match \"stderr|syslog\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -p 5432 -A -t -c \"SELECT * FROM pg_available_extensions where name='pgcrypto'\" stdout.strip should match \"stderr|syslog\"",
               "run_time": 0.045438,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"pgcrypto|1.2|1.2|cryptographic functions\" to match \"stderr|syslog\""
@@ -6306,25 +6306,25 @@
           "results": [
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%m\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%m\"",
               "run_time": 0.04399,
               "start_time": "2017-06-26 22:51:58 -0400"
             },
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%u\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%u\"",
               "run_time": 0.043678,
               "start_time": "2017-06-26 22:51:58 -0400"
             },
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%d\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%d\"",
               "run_time": 0.05056,
               "start_time": "2017-06-26 22:51:58 -0400"
             },
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%s\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -h 127.0.0.1 -d stig_test_db -A -t -c \"SHOW log_line_prefix\" stdout should include \"%s\"",
               "run_time": 0.04808,
               "start_time": "2017-06-26 22:51:58 -0400"
             },
@@ -6388,7 +6388,7 @@
           "results": [
             {
               "status": "passed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"SELECT * from pg_extension where extname != 'plpgsql';\" | cut -d'|' -f 1 stdout.strip should match \"pgcrypto\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"SELECT * from pg_extension where extname != 'plpgsql';\" | cut -d'|' -f 1 stdout.strip should match \"pgcrypto\"",
               "run_time": 8.8e-05,
               "start_time": "2017-06-26 22:51:58 -0400"
             }
@@ -6422,14 +6422,14 @@
           "results": [
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"\\du\" stdout.strip should match \"error\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c \"\\du\" stdout.strip should match \"error\"",
               "run_time": 0.048923,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\\nstig_dba|Superuser|{}\\nstig_user||{}\" to match \"error\"\nDiff:\n@@ -1,2 +1,4 @@\n-error\n+postgres|Superuser, Create role, Create DB, Replication, Bypass RLS|{}\n+stig_dba|Superuser|{}\n+stig_user||{}\n"
             },
             {
               "status": "failed",
-              "code_desc": "Command PGPASSWORD='stigD@1234#' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c -c \"SELECT * FROM pg_available_extensions WHERE installed_version IS NOT\n  NULL\" stdout.strip should match \"error\"",
+              "code_desc": "Command PGPASSWORD='********' psql -U stig_dba -d stig_test_db -h 127.0.0.1 -A -t -c -c \"SELECT * FROM pg_available_extensions WHERE installed_version IS NOT\n  NULL\" stdout.strip should match \"error\"",
               "run_time": 0.047331,
               "start_time": "2017-06-26 22:51:58 -0400",
               "message": "expected \"\" to match \"error\""
