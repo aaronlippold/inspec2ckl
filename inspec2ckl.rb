@@ -97,17 +97,28 @@ end
 # @todo add a 'Automated Tests brought to you by MITRE, CrunchyDB and InSpec' to the control comments.
 
 def inspec_status_to_clk_status(vuln, json_results)
-  case json_results[vuln]['status']
-  when 'passed'
-    result = 'NotAFinding'
-  when 'failed'
-    result = 'Open'
-  when 'skipped'
-    result = 'Not_Reviewed'
+  status_list = json_results[vuln]['status'].uniq
+  result = case
+    when status_list.include?('failed') then 'Open'
+    when status_list.include?('passed') then 'NotAFinding'
+    when status_list.include?('skipped') then 'Not_Reviewed'
+    else 'empty' # some controls are still coming in without results
   end
-  result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
+  result = 'Not_Applicable' if json_results[vuln]['impact'] == '0.0'
   result
 end
+# def inspec_status_to_clk_status(vuln, json_results)
+#   case json_results[vuln]['status'].uniq
+#   when 'passed'
+#     result = 'NotAFinding'
+#   when 'failed'
+#     result = 'Open'
+#   when 'skipped'
+#     result = 'Not_Reviewed'
+#   end
+#   result = 'Not_Applicable' if json_results[vuln]['imapct'] == '0'
+#   result
+# end
 
 def parse_json(json)
   file = JSON.parse(json)
@@ -117,8 +128,13 @@ def parse_json(json)
     gid = control['id']
     data[gid] = {}
     data[gid]['impact'] = control['impact'].to_s
-    data[gid]['status'] = control.key?('results') ? control['results'][0]['status'] : 'nil'
+    data[gid]['status'] = []
     # @todo:  Figure out usecases for multiple statuses of pass or skip
+    if control.key?('results')
+      control['results'].each do |result|
+        data[gid]['status'].push(result['status'])
+      end
+    end
   end
   data
 end
