@@ -11,18 +11,23 @@ parser = OptionParser.new do |opts|
   opts.banner = 'Usage: inspec2ckl.rb [options]'
   opts.on('-c',
           '--ckl ckl_file',
-          'the path to the DISA Checklist file') do |ckl|
+          'the path to the DISA Checklist file (required)') do |ckl|
             options[:ckl] = ckl
           end
   opts.on('-j',
           '--json json_file',
-          'the path to the InSpec JSON results file') do |json|
+          'the path to the InSpec JSON results file (required)') do |json|
             options[:json] = json
           end
   opts.on('-o',
           '--output results.ckl',
           'The file name you want for the output file (results.ckl)') do |output|
             options[:output] = output
+          end
+  opts.on('-m,',
+          '--message "mesg"',
+          'A message to add to the control\'s "comments" section (optional)') do |mesg|
+            options[:mesg] = mesg
           end
   opts.on('-v',
           '--version',
@@ -60,6 +65,7 @@ end
 puts json_file = options[:json].to_s
 puts ckl_file = options[:ckl].to_s
 puts results = options[:output].to_s
+puts @comment_mesg = options[:mesg].to_s || 'Automated compliance tests brought to you by the MITRE corp, CrunchyDB and the InSpec Project.'
 
 inspec_json = File.read(json_file)
 disa_xml = Nokogiri::XML(File.open(ckl_file))
@@ -70,11 +76,25 @@ def find_status_by_vuln(vuln, xml)
   node.parent.parent.xpath('./STATUS').text
 end
 
-def set_status_by_vuln(vuln, status, xml)
+def set_status_by_vuln(vuln, status, xml, msg = "")
   nodes = xml.search "[text()*='#{vuln}']"
   node = nodes.first
+  # @todo add a guard here to make sure we set a status even if we don't have results.
+  # an if status = 'bad thing' then status = "Not Reviewed" ??
   node.parent.parent.at('./STATUS').content = status
+  if !msg.empty?
+    content = node.parent.parent.at('./COMMENTS').content
+    if content.empty?
+      content = @comment_msg
+    else
+      content << "\n\n . @comment_msg"
+    end
+    node.parent.parent.at('./COMMENTS').content = content
+  end
 end
+
+# @todo add a case when we don't have a 'results array' => 'Not Reviewed'
+# @todo add a 'Automated Tests brought to you by MITRE, CrunchyDB and InSpec' to the control comments.
 
 def inspec_status_to_clk_status(vuln, json_results)
   case json_results[vuln]['status']
@@ -107,7 +127,7 @@ def update_ckl_file(disa_xml, parsed_json)
   disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
     vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
     new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
-    set_status_by_vuln(vnumber, new_status, disa_xml)
+    set_status_by_vuln(vnumber, new_status, disa_xml, @comment_mesg.to_s)
   end
 end
 
