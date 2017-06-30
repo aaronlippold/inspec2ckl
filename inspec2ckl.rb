@@ -91,13 +91,11 @@ def find_status_by_vuln(vuln, xml)
   node.parent.parent.xpath('./STATUS').text
 end
 
-def set_status_by_vuln(vuln, status, xml, msg = "")
+def set_status_by_vuln(vuln, status, xml, comment = "")
   nodes = xml.search "[text()*='#{vuln}']"
   node = nodes.first
-  # @todo add a guard here to make sure we set a status even if we don't have results.
-  # an if status = 'bad thing' then status = "Not Reviewed" ??
   node.parent.parent.at('./STATUS').content = status
-  if !msg.empty?
+  if !comment.empty?
     time = Time.now
     content = node.parent.parent.at('./COMMENTS').content
     if content.empty?
@@ -109,6 +107,28 @@ def set_status_by_vuln(vuln, status, xml, msg = "")
   end
 end
 
+def set_finding_details(vuln, vuln_messages, xml)
+  messages = ''
+  if vuln_messages == 'N/A'
+    puts 'messages is N/A'
+    messages = 'N/A'
+  else
+    vuln_messages.each do |mesg|
+      messages << "\n#{mesg}"
+    end
+  end
+  nodes = xml.search "[text()*='#{vuln}']"
+  node = nodes.first
+  puts content = node.parent.parent.at('./FINDING_DETAILS').content.inspect
+  time = Time.now
+  if content.empty?
+    content = "#{time}: #{messages}"
+  else
+    content << "\n#{time}: #{messages}"
+  end
+  node.parent.parent.at('./FINDING_DETAILS').content = content
+end
+
 def inspec_status_to_clk_status(vuln, json_results)
   status_list = json_results[vuln]['status'].uniq
   result = case
@@ -118,7 +138,8 @@ def inspec_status_to_clk_status(vuln, json_results)
     else 'Not_Reviewed' # in case some controls come back with no results
   end
   result = 'Not_Applicable' if json_results[vuln]['impact'] == '0.0'
-  puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
+  # puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
+  puts vuln, status_list, result, json_results[vuln]['impact'], json_results[vuln]['message'], '=============' if @verbose
   result
 end
 
@@ -132,10 +153,12 @@ def parse_json(json)
     data[gid] = {}
     data[gid]['impact'] = control['impact'].to_s
     data[gid]['status'] = []
+    data[gid]['message'] = []
     # @todo:  Figure out usecases for multiple statuses of pass or skip
     if control.key?('results')
       control['results'].each do |result|
         data[gid]['status'].push(result['status'])
+        data[gid]['message'].push(result['message']) unless result['message'].nil?
       end
     end
   end
@@ -147,6 +170,12 @@ def update_ckl_file(disa_xml, parsed_json)
     vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
     new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
     set_status_by_vuln(vnumber, new_status, disa_xml, @comment_mesg)
+    # puts 'parsed message:'
+    if !parsed_json[vnumber]['message'].empty?
+      set_finding_details(vnumber, parsed_json[vnumber]['message'], disa_xml)
+    else
+      set_finding_details(vnumber, 'N/A', disa_xml)
+    end
   end
 end
 
