@@ -193,7 +193,7 @@ $ export PGPORT=5432</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -364,9 +364,9 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000134</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -498,9 +498,9 @@ If PostgreSQL is not at the latest version and the evaluated version has CVEs (I
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002605</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -665,9 +665,9 @@ $ chmod 0600 &lt;log directory name&gt;/*.log</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000163</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -798,9 +798,9 @@ For each PostgreSQL-managed account that is not documented and approved, either 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000015</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -928,7 +928,7 @@ $ service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1066,9 +1066,9 @@ $ sudo chmod 0755 /usr/pgsql-9.5/bin/*</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001499</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1197,9 +1197,9 @@ $ psql -c "ALTER ROLE rolename WITH NOSUPERUSER"</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001499</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1319,9 +1319,9 @@ host all all .example.com md5</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000197</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1544,9 +1544,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000213</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:02 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1666,9 +1666,9 @@ RLS policies can be very different depending on their use case. For one example 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002264</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1809,7 +1809,7 @@ $ psql -c "ALTER ROLE &lt;rolname&gt; CONNECTION LIMIT 1";</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -1935,7 +1935,7 @@ REVOKE SELECT ON some_function FROM bob;</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2059,9 +2059,9 @@ For the complete list of permissions allowed by roles, see the official document
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000804</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2181,9 +2181,9 @@ RLS policies can be very different depending on their use case. For one example 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002262</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2308,9 +2308,9 @@ Do not allow general users direct console access to PostgreSQL.</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001310</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2417,9 +2417,9 @@ If dynamic code execution is employed in circumstances where the objective could
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001310</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2539,9 +2539,9 @@ If dynamic code execution is employed without protective measures against code i
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001310</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2648,9 +2648,9 @@ If there have been incidents where PostgreSQL ran out of audit log space, this i
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001849</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2787,9 +2787,9 @@ $ psql -c "REVOKE CREATE ON SCHEMA test FROM bob"</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002165</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -2949,9 +2949,9 @@ Check with the organization to see how syslog facilities are defined in their or
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000164</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3082,9 +3082,9 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001890</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3242,7 +3242,7 @@ client_min_messages = notice</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:09 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3375,7 +3375,7 @@ $ chmod 600 ${PGDATA?}/postgresql.conf</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3486,9 +3486,9 @@ It is possible to create scripts or implement third-party tools to enable real-t
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001858</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3608,9 +3608,9 @@ To configure PostgreSQL to use SSL, see supplementary content APPENDIX-G for ins
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002422</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3740,7 +3740,7 @@ $ psql -c "ALTER SCHEMA test OWNER TO bob"</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3849,9 +3849,9 @@ If access or use of this account is not restricted to the minimum number of pers
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001499</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -3960,9 +3960,9 @@ If other applications are located in the same directory as PostgreSQL, this is a
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001499</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4075,9 +4075,9 @@ To ensure that logging is enabled, review supplementary content APPENDIX-C for i
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000135</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4200,9 +4200,9 @@ $ psql -c "ALTER FUNCTION &lt;function_name&gt; SECURITY INVOKER;"</ATTRIBUTE_DA
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002233</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4324,9 +4324,9 @@ All errors and denials are logged if logging is enabled.</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002754</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4465,9 +4465,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001844</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4600,9 +4600,9 @@ Do not grant access to pg_catalog or information_schema to anyone but the databa
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001084</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4733,9 +4733,9 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001814</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -4910,9 +4910,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000162</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5022,9 +5022,9 @@ If multiple versions of postgres are installed but are unused, this is a finding
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002617</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5151,9 +5151,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5399,9 +5399,9 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5542,9 +5542,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5690,9 +5690,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5816,9 +5816,9 @@ Unsuccessful attempts to modifying security objects can be logged if logging is 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -5967,9 +5967,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6106,9 +6106,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6252,9 +6252,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6394,9 +6394,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6521,9 +6521,9 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6649,9 +6649,9 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6804,9 +6804,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -6941,9 +6941,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7089,9 +7089,9 @@ All errors and denials are logged if logging is enabled. To ensure that logging 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7244,9 +7244,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7375,9 +7375,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7522,9 +7522,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7657,9 +7657,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7804,9 +7804,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -7943,9 +7943,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8078,9 +8078,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8222,9 +8222,9 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8364,9 +8364,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:03 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8503,9 +8503,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8631,9 +8631,9 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8756,9 +8756,9 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -8915,9 +8915,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000185</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9056,9 +9056,9 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002420</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9175,9 +9175,9 @@ To ensure that logging is enabled, review supplementary content APPENDIX-C for i
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000169</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9318,9 +9318,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001889</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9448,9 +9448,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001487</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9563,7 +9563,7 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9700,9 +9700,9 @@ Deploy NSA-approved encrypting devices to protect the server on the network.</AT
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002450</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9817,7 +9817,7 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -9939,9 +9939,9 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001199</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10082,9 +10082,9 @@ Implement the approved permissions. Revoke any unapproved permissions.</ATTRIBUT
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001812</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:10 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10208,9 +10208,9 @@ ALTER ROLE &lt;username&gt; NOSUPERUSER NOCREATEDB NOCREATEROLE NOBYPASSRLS;</AT
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001082</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10326,9 +10326,9 @@ For session logging we suggest using pgaudit. For instructions on how to setup p
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001464</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10458,9 +10458,9 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002475</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10616,7 +10616,7 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10733,7 +10733,7 @@ Note: it is recommended that plpgsql not be removed.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10862,9 +10862,9 @@ $ psql -c "DROP EXTENSION extension_name"</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000381</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -10985,9 +10985,9 @@ $ sudo apt-get remove &lt;package_name&gt;</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000381</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11105,9 +11105,9 @@ RLS policies can be very different depending on their use case. For one example 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002263</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11240,9 +11240,9 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000196</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11368,9 +11368,9 @@ $ psql -c "REVOKE ALL PRIVILEGES ON &lt;table&gt; FROM &lt;role_name&gt;;</ATTRI
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001813</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11513,9 +11513,9 @@ Use accounts assigned to individual users. Where the application connects to Pos
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000166</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11662,9 +11662,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001462</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11791,9 +11791,9 @@ Schedule this script in cron to run around the clock.</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001855</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -11983,9 +11983,9 @@ For a specific audit role:
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001914</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12119,9 +12119,9 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE user LIKE '%'</ATTR
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002038</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12259,9 +12259,9 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000186</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12378,9 +12378,9 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002470</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12544,9 +12544,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000130</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12666,9 +12666,9 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002476</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12805,9 +12805,9 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001185</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -12957,9 +12957,9 @@ $ psql -c "ALTER ROLE &lt;role-name&gt; WITH NOSUPERUSER"</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001493</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13090,9 +13090,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000131</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13217,9 +13217,9 @@ $ sudo chown -R root:root /usr/pgsql-9.5/share/contrib/pgaudit</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001495</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13361,9 +13361,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001851</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13492,9 +13492,9 @@ For further SSL configurations, see the official documentation: https://www.post
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001188</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13638,7 +13638,7 @@ For more information on pg_hba.conf, see the official documentation: https://www
                 </STIG_DATA>
                 <STATUS>Not_Reviewed</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13766,9 +13766,9 @@ This script would be added to a cron job:
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002361</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -13914,9 +13914,9 @@ See the PostgreSQL documentation for more details: http://www.postgresql.org/doc
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-002235</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14039,9 +14039,9 @@ For information on configuring PostgreSQL to use SSL, see supplementary content 
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000187</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14152,9 +14152,9 @@ If the code that exists for data movement does not comply with the organization-
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-001090</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Not_Reviewed</STATUS>
+                <STATUS>Not_Applicable</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14272,7 +14272,7 @@ Any files (for example: extra configuration files) created in PGDATA must be own
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14409,7 +14409,7 @@ $ chmod 0600 ${PGDATA?}/*.conf</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14524,9 +14524,9 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000803</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>NotAFinding</STATUS>
+                <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14661,9 +14661,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14809,9 +14809,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -14948,9 +14948,9 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>CCI-000172</ATTRIBUTE_DATA>
                 </STIG_DATA>
-                <STATUS>Open</STATUS>
+                <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:04 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -15057,7 +15057,7 @@ If FIPS encryption is not enabled, this is a finding.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>Open</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:05 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>
@@ -15202,7 +15202,7 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STATUS>NotAFinding</STATUS>
                 <FINDING_DETAILS/>
-                <COMMENTS>2017-06-29 23:45:11 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
+                <COMMENTS>2017-06-30 20:34:05 -0400: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.</COMMENTS>
                 <SEVERITY_OVERRIDE/>
                 <SEVERITY_JUSTIFICATION/>
             </VULN>

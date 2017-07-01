@@ -1,70 +1,92 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 require 'rubygems'
 require 'json'
 require 'nokogiri'
 require 'optparse'
 require 'date'
+require 'thor'
 script_version = '1.1'
 
-options = { ckl_file: nil, json_file: nil, output: nil }
+# options = { ckl_file: nil, json_file: nil, output: nil }
+#
+# parser = OptionParser.new do |opts|
+#   opts.banner = 'Usage: inspec2ckl.rb [options]'
+#   opts.on('-c',
+#           '--ckl ckl_file',
+#           'the path to the DISA Checklist file (required)') do |ckl|
+#             options[:ckl] = ckl
+#           end
+#   opts.on('-j',
+#           '--json json_file',
+#           'the path to the InSpec JSON results file (required)') do |json|
+#             options[:json] = json
+#           end
+#   opts.on('-o',
+#           '--output results.ckl',
+#           'The file name you want for the output file (results.ckl)') do |output|
+#             options[:output] = output
+#           end
+#   opts.on('-m,',
+#           '--message "mesg"', String,
+#           'A message to add to the control\'s "comments" section (optional)') do |mesg|
+#             options[:mesg] = mesg
+#           end
+#   opts.on('-V,',
+#           '--verbose',
+#           'Show me the data!!! (true|*false)') do |verbose|
+#             options[:verbose] = verbose
+#           end
+#   opts.on('-v',
+#           '--version',
+#           'inspec2ckl version') do
+#     puts 'inspec2ckl: v' + script_version.to_s
+#     exit
+#   end
+#   opts.on('-h',
+#           '--help',
+#           'Displays Help') do
+#     puts opts
+#     exit
+#   end
+# end
+#
+# parser.parse!
+#
+# if options[:ckl].nil?
+#   print 'Enter the path to the base DISA Checklist file (required): '
+#   options[:ckl] = gets.chomp
+# end
+#
+# if options[:json].nil?
+#   print 'Enter the path to your InSpec JSON full results file (required): '
+#   options[:json] = gets.chomp
+# end
+#
+# if options[:output].nil?
+#   puts 'The results will be placed in the file - `results.ckl`: '
+#   options[:output] = 'results.ckl'
+# end
 
-parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: inspec2ckl.rb [options]'
-  opts.on('-c',
-          '--ckl ckl_file',
-          'the path to the DISA Checklist file (required)') do |ckl|
-            options[:ckl] = ckl
-          end
-  opts.on('-j',
-          '--json json_file',
-          'the path to the InSpec JSON results file (required)') do |json|
-            options[:json] = json
-          end
-  opts.on('-o',
-          '--output results.ckl',
-          'The file name you want for the output file (results.ckl)') do |output|
-            options[:output] = output
-          end
-  opts.on('-m,',
-          '--message "mesg"', String,
-          'A message to add to the control\'s "comments" section (optional)') do |mesg|
-            options[:mesg] = mesg
-          end
-  opts.on('-V,',
-          '--verbose',
-          'Show me the data!!! (true|*false)') do |verbose|
-            options[:verbose] = verbose
-          end
-  opts.on('-v',
-          '--version',
-          'inspec2ckl version') do
-    puts 'inspec2ckl: v' + script_version.to_s
-    exit
+class Test < Thor
+  desc "example FILE", "an example task"
+  method_option :delete, :aliases => "-d", :desc => "Delete the file after parsing it"
+  method_options %w( say_hi -h ) => :boolean, :desc => "Say Hi"
+
+  def example(file)
+    puts "You supplied the file: #{file}"
+    delete_file = options[:delete]
+    if delete_file
+      puts "You specified that you would like to delete #{file}"
+    elsif options[:say_hi]
+      puts "Hi!"
+    else
+      puts "You do not want to delete #{file}"
+    end
   end
-  opts.on('-h',
-          '--help',
-          'Displays Help') do
-    puts opts
-    exit
-  end
+
 end
 
-parser.parse!
-
-if options[:ckl].nil?
-  print 'Enter the path to the base DISA Checklist file (required): '
-  options[:ckl] = gets.chomp
-end
-
-if options[:json].nil?
-  print 'Enter the path to your InSpec JSON full results file (required): '
-  options[:json] = gets.chomp
-end
-
-if options[:output].nil?
-  puts 'The results will be placed in the file - `results.ckl`: '
-  options[:output] = 'results.ckl'
-end
+Test.start
 
 json_file = options[:json].to_s
 ckl_file = options[:ckl].to_s
@@ -117,14 +139,15 @@ def inspec_status_to_clk_status(vuln, json_results)
     when status_list.include?('skipped') then 'Not_Reviewed'
     else 'Not_Reviewed' # in case some controls come back with no results
   end
-  result = 'Not_Applicable' if json_results[vuln]['impact'] == '0.0'
+  result = 'Not_Applicable' if json_results[vuln]['impact'].to_f == 0.0
   puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
   result
 end
 
 def parse_json(json)
   file = JSON.parse(json)
-  controls = file['profiles'][0]['controls']
+  #require 'pry'; binding.pry;
+  controls = file['profiles'][1]['controls']
   data = {}
   controls.each do |control|
     @count += 1
@@ -135,6 +158,7 @@ def parse_json(json)
     # @todo:  Figure out usecases for multiple statuses of pass or skip
     if control.key?('results')
       control['results'].each do |result|
+        puts result
         data[gid]['status'].push(result['status'])
       end
     end

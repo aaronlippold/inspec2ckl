@@ -15,5 +15,7 @@ Usage: inspec2ckl.rb [options]
     -h, --help                       Displays Help
 ```
 
+## Example
+To use the parser, 
 ## Known Issues
 - Issues welcome - please submit suggestions or issues on the board.
