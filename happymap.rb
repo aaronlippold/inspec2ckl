@@ -59,6 +59,9 @@ require 'nokogiri'
     print " has status: "
     print vuln.status
     print "\n"
+
+    puts "vul_id: #{vuln.stig_data[0].data}"
+    puts "severity: #{vuln.stig_data[1].data}"
   end
   #print checklist.to_xml
 
