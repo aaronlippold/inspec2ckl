@@ -5,7 +5,6 @@ require 'nokogiri'
 require 'optparse'
 require 'date'
 require 'thor'
-script_version = '1.1'
 
 # options = { ckl_file: nil, json_file: nil, output: nil }
 #
@@ -66,27 +65,6 @@ script_version = '1.1'
 #   puts 'The results will be placed in the file - `results.ckl`: '
 #   options[:output] = 'results.ckl'
 # end
-
-class Test < Thor
-  desc "example FILE", "an example task"
-  method_option :delete, :aliases => "-d", :desc => "Delete the file after parsing it"
-  method_options %w( say_hi -h ) => :boolean, :desc => "Say Hi"
-
-  def example(file)
-    puts "You supplied the file: #{file}"
-    delete_file = options[:delete]
-    if delete_file
-      puts "You specified that you would like to delete #{file}"
-    elsif options[:say_hi]
-      puts "Hi!"
-    else
-      puts "You do not want to delete #{file}"
-    end
-  end
-
-end
-
-Test.start
 
 json_file = options[:json].to_s
 ckl_file = options[:ckl].to_s
