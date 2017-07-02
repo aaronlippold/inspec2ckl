@@ -170,7 +170,7 @@ end
 
 #
 class Inspec2ckl
-  def initialize(xml_file,json_file,output_file)
+  def initialize(xml_file, json_file, output_file)
     inspec_json = File.read(json_file)
     disa_xml = Nokogiri::XML(File.open(xml_file))
     @data = parse_json(inspec_json)
@@ -185,15 +185,14 @@ class Inspec2ckl
 
   def clk_status(control)
     status_list = control[:status].uniq
-    puts status_list
-    result = case
-      when status_list.include?('failed') then 'Open'
-      when status_list.include?('passed') then 'NotAFinding'
-      when status_list.include?('skipped') then 'Not_Reviewed'
-      # else 'Not_Reviewed' # in case some controls come back with no results
+    puts status_list if @verbose
+    result = 'Open' if status_list.include?('failed')
+    result = 'NotAFinding' if status_list.include?('passed')
+    result = 'Not_Reviewed' if status_list.include?('skipped')
+    result = 'Not_Applicable' if control[:impact].to_f.zero?
+    if @verbose
+      puts vuln, status_list, result, json_results[vuln]['impact'], '============='
     end
-    result = 'Not_Applicable' if control[:impact].to_f == 0
-    puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
     result
   end
 
@@ -217,7 +216,7 @@ class Inspec2ckl
       # puts clk_status(@data[control_id])
       set_STATUS(control_id, clk_status(@data[control_id]))
       set_COMMENTS(control_id,"#{get_COMMENTS(control_id)}\n#{Time.now}: #{@comment_mesg}")
-      set_FINDING_DETAILS(control_id,clk_finding_details(control))
+      set_FINDING_DETAILS(control_id, clk_finding_details(control))
     end
   end
 
@@ -285,4 +284,4 @@ class Inspec2ckl
   end
 end
 
-test = Inspec2ckl.new(ckl_file,json_file,results)
+test = Inspec2ckl.new(ckl_file, json_file, results)
