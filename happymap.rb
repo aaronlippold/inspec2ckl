@@ -2,6 +2,7 @@
 
 require 'happymapper'
 require 'nokogiri'
+require 'awesome_print'
 
 # see: https://github.com/dam5s/happymapper
 
@@ -27,8 +28,8 @@ require 'nokogiri'
   class StigData
     include HappyMapper
     tag 'STIG_DATA'
-    element :attrib, String, :tag => 'VULN_ATTRIBUTE'
-    element :data, String, :tag => 'ATTRIBUTE_DATA'
+    has_one :attrib, String, :tag => 'VULN_ATTRIBUTE'
+    has_one :data, String, :tag => 'ATTRIBUTE_DATA'
   end
 
   class Vuln
@@ -50,20 +51,26 @@ require 'nokogiri'
     has_many :vuls, Vuln, :tag => 'VULN'
   end
 
-  checklist = Checklist.parse(doc.to_s)
+  @checklist = Checklist.parse(doc.to_s)
 
-  print checklist
-
-  checklist.vuls.each do |vuln|
-    print vuln.stig_data.first.data
-    print " has status: "
+  @checklist.vuls.each do |vuln|
+    print "#{vuln.stig_data[0].data} has status: "
     print vuln.status
     print "\n"
 
     puts "vul_id: #{vuln.stig_data[0].data}"
     puts "severity: #{vuln.stig_data[1].data}"
   end
-  #print checklist.to_xml
+
+  puts "let's play with the data",'----------'
+  puts "let's set the status of the first vulnerability to 'Open'"
+  puts "it started as #{@checklist.vuls.first.status}"
+  @checklist.vuls.first.status = "Open"
+  @checklist.vuls.first.comments = "Generated with Love at the MITRE corp."
+  puts "Now, it's is #{@checklist.vuls.first.status}"
+  puts "... waiting ... and ..."
+  sleep(2)
+  puts @checklist.vuls.first.to_xml
 
   # puts checklist.asset.inspect
 
