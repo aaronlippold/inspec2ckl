@@ -36,13 +36,39 @@ require 'awesome_print'
     include HappyMapper
     tag 'VULN'
     has_many :stig_data, StigData, :tag =>'STIG_DATA'
-    has_one :status, String, :tag => 'STATUS'
+    element :status, String, :tag => 'STATUS'
     has_one :finding_details, String, :tag => 'FINDING_DETAILS'
     has_one :comments, String, :tag => 'COMMENTS'
     has_one :severity_justification, String, :tag => 'SEVERITY_JUSTIFICATION'
   end
 
   #@todo missing the iSTIG class
+  #@todo missing STIG Class
+  # SI_DATA
+  # STIG_INFO
+
+  class SI_DATA
+    include HappyMapper
+    tag 'SI_DATA'
+
+    element :data, String, tag: 'SID_DATA'
+    element :name, String, tag: 'SID_NAME'
+  end
+
+  class STIG_INFO
+    include HappyMapper
+    tag 'STIG_INFO'
+
+    has_many :si_data, SI_DATA, tag: 'SI_DATA'
+  end
+
+  class ISTIG
+    include HappyMapper
+    tag 'iSTIG'
+
+    has_one :stig_info, STIG_INFO, tag: 'STIG_INFO'
+    has_many :vuln, VULN, tag: 'VULN'
+  end
 
   class Checklist
     include HappyMapper
@@ -61,6 +87,8 @@ require 'awesome_print'
     puts "vul_id: #{vuln.stig_data[0].data}"
     puts "severity: #{vuln.stig_data[1].data}"
   end
+
+  ap @checklist.vuls
 
   puts "let's play with the data",'----------'
   puts "let's set the status of the first vulnerability to 'Open'"
