@@ -1,158 +1,168 @@
-#!/usr/bin/env ruby
-require 'rubygems'
-require 'json'
+#!/usr/local/bin/ruby
+
+require 'happymapper'
 require 'nokogiri'
-require 'optparse'
-require 'date'
-require 'thor'
 
-# options = { ckl_file: nil, json_file: nil, output: nil }
-#
-# parser = OptionParser.new do |opts|
-#   opts.banner = 'Usage: inspec2ckl.rb [options]'
-#   opts.on('-c',
-#           '--ckl ckl_file',
-#           'the path to the DISA Checklist file (required)') do |ckl|
-#             options[:ckl] = ckl
-#           end
-#   opts.on('-j',
-#           '--json json_file',
-#           'the path to the InSpec JSON results file (required)') do |json|
-#             options[:json] = json
-#           end
-#   opts.on('-o',
-#           '--output results.ckl',
-#           'The file name you want for the output file (results.ckl)') do |output|
-#             options[:output] = output
-#           end
-#   opts.on('-m,',
-#           '--message "mesg"', String,
-#           'A message to add to the control\'s "comments" section (optional)') do |mesg|
-#             options[:mesg] = mesg
-#           end
-#   opts.on('-V,',
-#           '--verbose',
-#           'Show me the data!!! (true|*false)') do |verbose|
-#             options[:verbose] = verbose
-#           end
-#   opts.on('-v',
-#           '--version',
-#           'inspec2ckl version') do
-#     puts 'inspec2ckl: v' + script_version.to_s
-#     exit
-#   end
-#   opts.on('-h',
-#           '--help',
-#           'Displays Help') do
-#     puts opts
-#     exit
-#   end
-# end
-#
-# parser.parse!
-#
-# if options[:ckl].nil?
-#   print 'Enter the path to the base DISA Checklist file (required): '
-#   options[:ckl] = gets.chomp
-# end
-#
-# if options[:json].nil?
-#   print 'Enter the path to your InSpec JSON full results file (required): '
-#   options[:json] = gets.chomp
-# end
-#
-# if options[:output].nil?
-#   puts 'The results will be placed in the file - `results.ckl`: '
-#   options[:output] = 'results.ckl'
-# end
+# see: https://github.com/dam5s/happymapper
 
-json_file = options[:json].to_s
-ckl_file = options[:ckl].to_s
-results = options[:output].to_s
-@comment_mesg = options[:mesg] || 'Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project.'
-@verbose = options[:verbose] || false
-@count = 0
-
-if @verbose
-  puts '=========='
-  puts "Parsing the InSpec Results from: #{json_file}"
-  puts "Creating a new DISA Checklist file: #{results}"
-  puts '-------'
-  puts "using #{ckl_file} as a base"
-  puts '=========='
+class Asset
+  include HappyMapper
+  tag 'ASSET'
+  element :role, String, tag: 'ROLE'
+  element :type, String, tag: 'ASSET_TYPE'
+  element :host_name, String, tag: 'HOST_NAME'
+  element :host_ip, String, tag: 'HOST_IP'
+  element :host_mac, String, tag: 'HOST_MAC'
+  element :host_guid, String, tag: 'HOST_GUID'
+  element :host_fqdn, String, tag: 'HOST_FQDN'
+  element :tech_area, String, tag: 'TECH_AREA'
+  element :target_key, String, tag: 'TARGET_KEY'
+  element :web_or_database, String, tag: 'WEB_OR_DATABASE'
+  element :web_db_site, String, tag: 'WEB_DB_SITE'
+  element :web_db_instance, String, tag: 'WEB_DB_INSTANCE'
 end
 
-inspec_json = File.read(json_file)
-disa_xml = Nokogiri::XML(File.open(ckl_file))
-
-def find_status_by_vuln(vuln, xml)
-  nodes = xml.search "[text()*='#{vuln}']"
-  node = nodes.first
-  node.parent.parent.xpath('./STATUS').text
+class SI_DATA
+  include HappyMapper
+  tag 'SI_DATA'
+  element :name, String, tag: 'SID_NAME'
+  element :data, String, tag: 'SID_DATA'
 end
 
-def set_status_by_vuln(vuln, status, xml, msg = "")
-  nodes = xml.search "[text()*='#{vuln}']"
-  node = nodes.first
-  # @todo add a guard here to make sure we set a status even if we don't have results.
-  # an if status = 'bad thing' then status = "Not Reviewed" ??
-  node.parent.parent.at('./STATUS').content = status
-  if !msg.empty?
-    time = Time.now
-    content = node.parent.parent.at('./COMMENTS').content
-    if content.empty?
-      content = "#{time}: #{@comment_mesg}"
-    else
-      content << "\n#{time}: #{@comment_mesg}"
-    end
-    node.parent.parent.at('./COMMENTS').content = content
-  end
+class StigInfo
+  include HappyMapper
+  tag 'STIG_INFO'
+  has_many :si_data, SI_DATA, tag: 'SI_DATA'
 end
 
-def inspec_status_to_clk_status(vuln, json_results)
-  status_list = json_results[vuln]['status'].uniq
-  result = case
-    when status_list.include?('failed') then 'Open'
-    when status_list.include?('passed') then 'NotAFinding'
-    when status_list.include?('skipped') then 'Not_Reviewed'
-    else 'Not_Reviewed' # in case some controls come back with no results
-  end
-  result = 'Not_Applicable' if json_results[vuln]['impact'].to_f == 0.0
-  puts vuln, status_list, result, json_results[vuln]['impact'], '=============' if @verbose
-  result
+class StigData
+    include HappyMapper
+    tag 'STIG_DATA'
+    has_one :attrib, String, tag: 'VULN_ATTRIBUTE'
+    has_one :data, String, tag: 'ATTRIBUTE_DATA'
 end
 
-def parse_json(json)
-  file = JSON.parse(json)
-  #require 'pry'; binding.pry;
-  controls = file['profiles'][1]['controls']
-  data = {}
-  controls.each do |control|
-    @count += 1
-    gid = control['id']
-    data[gid] = {}
-    data[gid]['impact'] = control['impact'].to_s
-    data[gid]['status'] = []
-    # @todo:  Figure out usecases for multiple statuses of pass or skip
-    if control.key?('results')
-      control['results'].each do |result|
-        puts result
-        data[gid]['status'].push(result['status'])
+class Vuln
+  include HappyMapper
+  tag 'VULN'
+  has_many :stig_data, StigData, tag:'STIG_DATA'
+  has_one :status, String, tag: 'STATUS'
+  has_one :finding_details, String, tag: 'FINDING_DETAILS'
+  has_one :comments, String, tag: 'COMMENTS'
+  has_one :severity_override, String, tag: 'SEVERITY_OVERRIDE'
+  has_one :severity_justification, String, tag: 'SEVERITY_JUSTIFICATION'
+end
+
+class IStig
+  include HappyMapper
+  tag 'iSTIG'
+  has_one :stig_info, StigInfo, tag: 'STIG_INFO'
+  has_many :vuln, Vuln, tag: 'VULN'
+end
+
+class Stigs
+  include HappyMapper
+  tag 'STIGS'
+  has_one :istig, IStig, tag: 'iSTIG'
+end
+
+class Checklist
+  include HappyMapper
+  tag 'CHECKLIST'
+  has_one :asset, Asset, tag: 'ASSET'
+  has_one :stig, Stigs, tag: 'STIGS'
+
+  def where(attrib, data)
+    stig.istig.vuln.each do |vuln|
+      if vuln.stig_data.any? { |element| element.attrib == attrib && element.data == data}
+        # @todo Handle multiple objects that match the condition
+        return vuln
       end
     end
   end
-  data
+
 end
 
-def update_ckl_file(disa_xml, parsed_json)
-  disa_xml.xpath('//CHECKLIST/STIGS/iSTIG/VULN').each do |vul|
-    vnumber = vul.xpath('./STIG_DATA/VULN_ATTRIBUTE[text()="Vuln_Num"]/../ATTRIBUTE_DATA').text
-    new_status = inspec_status_to_clk_status(vnumber.to_s, parsed_json)
-    set_status_by_vuln(vnumber, new_status, disa_xml, @comment_mesg)
+class Inspec2ckl < Checklist
+  def initialize(json_file,cklist_file,output_file)
+    doc = File.open(cklist_file.to_s) { |f| Nokogiri::XML(f) }
+    inspec_json = File.read(json_file.to_s)
+    @data = parse_json(inspec_json)
+    @checklist = Checklist.new
+    @checklist = Checklist.parse(doc.to_s)
+    update_ckl_file
+    File.write(output_file.to_s, @checklist.to_xml)
+    puts "Processed #{@data.keys.count} controls"
+  end
+
+  def clk_status(control)
+    status_list = control[:status].uniq
+    puts status_list if @verbose
+    if status_list.include?('failed')
+      result = 'Open'
+    elsif status_list.include?('passed')
+      result = 'NotAFinding'
+    elsif status_list.include?('skipped')
+      result = 'Not_Reviewed'
+    elsif control[:impact].to_f.zero?
+      result = 'Not_Applicable'
+    else
+      result = 'Not_Tested'
+    end
+    if @verbose
+      puts vuln, status_list, result, json_results[vuln]['impact'], '============='
+    end
+    result
+  end
+
+  def clk_finding_details(control)
+    control_clk_status = @checklist.where('Vuln_Num',control[:control_id]).status
+    result = "One or more of the automated tests failed or was inconvlusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
+    result = 'All Automated tests passed for the control' if control_clk_status == 'NotAFinding'
+    result = "Automated test skipped due to known accepted condition in the control : \n\n#{control[:message]}" if control_clk_status == 'Not_Reviewed'
+    result = "Justification: \n\n #{control[:message]}" if control_clk_status == 'Not_Applicable'
+    result = 'No test available for this control' if control_clk_status == 'Not_Tested'
+    result
+  end
+
+  def update_ckl_file
+    @data.keys.each do | control_id |
+      vuln = @checklist.where('Vuln_Num',control_id.to_s)
+      vuln.status = clk_status(@data[control_id])
+      vuln.comments << "\n#{Time.now}: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project."
+      vuln.finding_details << clk_finding_details(@data[control_id])
+
+      if @verbose
+        puts control_id
+        puts @checklist.where('Vuln_Num',control_id.to_s).status
+        puts @checklist.where('Vuln_Num',control_id.to_s).finding_details
+        puts '====================================='
+      end
+    end
+  end
+
+  def parse_json(json)
+    file = JSON.parse(json)
+    controls = file['profiles'].last['controls']
+    data = {}
+    controls.each do |control|
+      c_id = control['id'].to_sym
+      data[c_id] = {}
+      data[c_id][:control_id] = control['id']
+      data[c_id][:impact] = control['impact'].to_s
+      data[c_id][:status] = []
+      data[c_id][:message] = []
+      if control.key?('results')
+        control['results'].each do |result|
+          data[c_id][:status].push(result['status'])
+          data[c_id][:message].push(result['skip_message']) if result['status'] == 'skipped'
+          data[c_id][:message].push(result['message']) if result['status'] == 'failed'
+        end
+      end
+      if data[c_id][:impact].to_f == 0
+        data[c_id][:message] = control['desc']
+      end
+    end
+    data
   end
 end
-
-test_results = parse_json(inspec_json)
-update_ckl_file(disa_xml, test_results)
-File.write(results, disa_xml.to_xml)
-puts "Processed #{@count} controls"
