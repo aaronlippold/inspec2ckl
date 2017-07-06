@@ -16,6 +16,13 @@ Usage: inspec2ckl.rb [options]
 ```
 
 ## Example
-To use the parser, 
+```
+To run the parser:
+  ./inspec2ckl exec -c checklist.ckl -j results.json -o output.ckl
+Help:
+  ./inspec2ckl help
+Version:
+  ./inspec2ckl -v
+```
 ## Known Issues
 - Issues welcome - please submit suggestions or issues on the board.

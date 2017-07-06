@@ -41,9 +41,9 @@ class Inspec2ckl < Checklist
 
   def clk_finding_details(control)
     control_clk_status = @checklist.where('Vuln_Num',control[:control_id]).status
-    result = "One or more of the automated tests failed or was inconclusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
-    result = 'All Automated tests passed for the control' if control_clk_status == 'NotAFinding'
-    result = "Automated test skipped due to known accepted condition in the control : \n\n#{control[:message]}" if control_clk_status == 'Not_Reviewed'
+    result = "One or more of the automated tests failed or was inconclusive for the control \n\n #{control[:message].sort.join}" if control_clk_status == 'Open'
+    result = "All Automated tests passed for the control \n\n #{control[:message].join}" if control_clk_status == 'NotAFinding'
+    result = "Automated test skipped due to known accepted condition in the control : \n\n#{control[:message].join}" if control_clk_status == 'Not_Reviewed'
     result = "Justification: \n #{control[:message].split.join(' ')}" if control_clk_status == 'Not_Applicable'
     result = 'No test available for this control' if control_clk_status == 'Not_Tested'
     result
@@ -81,10 +81,11 @@ class Inspec2ckl < Checklist
         control['results'].each do |result|
           data[c_id][:status].push(result['status'])
           data[c_id][:message].push(result['skip_message']) if result['status'] == 'skipped'
-          data[c_id][:message].push(result['message']) if result['status'] == 'failed'
+          data[c_id][:message].push("FAILED -- Test: #{result['code_desc']}\nMessage: #{result['message']}\n") if result['status'] == 'failed'
+          data[c_id][:message].push("PASS -- #{result['code_desc']}\n") if result['status'] == 'passed'
         end
       end
-      if data[c_id][:impact].to_f == 0
+      if data[c_id][:impact].to_f.zero?
         data[c_id][:message] = control['desc']
       end
     end
