@@ -1,4 +1,7 @@
 #!/usr/local/bin/ruby
+# encoding: utf-8
+# author: Aaron Lippold
+# author: Rony Xavier rx294@nyu.edu
 
 require 'happymapper'
 require 'nokogiri'
