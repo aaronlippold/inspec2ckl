@@ -18,8 +18,6 @@ class MyCLI < Thor
     puts "\t-v --verbose : verbose run"
     puts "\nexample: ./cli.rb inspec2ckl -c checklist.ckl -j results.json -o output.ckl\n\n"
   end
-
-
 end
 
 MyCLI.start(ARGV)

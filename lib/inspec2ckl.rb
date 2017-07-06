@@ -4,3 +4,4 @@ libdir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
 require 'inspec2ckl/version'
+require 'inspec2ckl/StigChecklist'
