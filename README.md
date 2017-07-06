@@ -19,10 +19,16 @@ Usage: inspec2ckl.rb [options]
 ```
 To run the parser:
   ./inspec2ckl exec -c checklist.ckl -j results.json -o output.ckl
+
+To run the parser verbose:
+  ./inspec2ckl exec -c checklist.ckl -j results.json -o output.ckl -V
+
 Help:
   ./inspec2ckl help
+
 Version:
   ./inspec2ckl -v
 ```
 ## Known Issues
-- Issues welcome - please submit suggestions or issues on the board.
+- Validation for the Json and XML files not yet implemented
+- More Issues welcome - please submit suggestions or issues on the board.
