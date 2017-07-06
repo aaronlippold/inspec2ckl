@@ -40,7 +40,7 @@ class MyCLI < Thor
     puts "\t-c --cklist : Path to Stig Checklist file"
     puts "\t-o --output : Path to output checklist file"
     puts "\t-v --verbose : verbose run"
-    puts "\nexample: ./inspec2ckl -c checklist.ckl -j results.json -o output.ckl\n\n"
+    puts "\nexample: ./inspec2ckl exec -c checklist.ckl -j results.json -o output.ckl\n\n"
   end
 end
 
