@@ -2,131 +2,53 @@
 
 require 'happymapper'
 require 'nokogiri'
-
-# see: https://github.com/dam5s/happymapper
-
-class Asset
-  include HappyMapper
-  tag 'ASSET'
-  element :role, String, tag: 'ROLE'
-  element :type, String, tag: 'ASSET_TYPE'
-  element :host_name, String, tag: 'HOST_NAME'
-  element :host_ip, String, tag: 'HOST_IP'
-  element :host_mac, String, tag: 'HOST_MAC'
-  element :host_guid, String, tag: 'HOST_GUID'
-  element :host_fqdn, String, tag: 'HOST_FQDN'
-  element :tech_area, String, tag: 'TECH_AREA'
-  element :target_key, String, tag: 'TARGET_KEY'
-  element :web_or_database, String, tag: 'WEB_OR_DATABASE'
-  element :web_db_site, String, tag: 'WEB_DB_SITE'
-  element :web_db_instance, String, tag: 'WEB_DB_INSTANCE'
-end
-
-class SI_DATA
-  include HappyMapper
-  tag 'SI_DATA'
-  element :name, String, tag: 'SID_NAME'
-  element :data, String, tag: 'SID_DATA'
-end
-
-class StigInfo
-  include HappyMapper
-  tag 'STIG_INFO'
-  has_many :si_data, SI_DATA, tag: 'SI_DATA'
-end
-
-class StigData
-    include HappyMapper
-    tag 'STIG_DATA'
-    has_one :attrib, String, tag: 'VULN_ATTRIBUTE'
-    has_one :data, String, tag: 'ATTRIBUTE_DATA'
-end
-
-class Vuln
-  include HappyMapper
-  tag 'VULN'
-  has_many :stig_data, StigData, tag:'STIG_DATA'
-  has_one :status, String, tag: 'STATUS'
-  has_one :finding_details, String, tag: 'FINDING_DETAILS'
-  has_one :comments, String, tag: 'COMMENTS'
-  has_one :severity_override, String, tag: 'SEVERITY_OVERRIDE'
-  has_one :severity_justification, String, tag: 'SEVERITY_JUSTIFICATION'
-end
-
-class IStig
-  include HappyMapper
-  tag 'iSTIG'
-  has_one :stig_info, StigInfo, tag: 'STIG_INFO'
-  has_many :vuln, Vuln, tag: 'VULN'
-end
-
-class Stigs
-  include HappyMapper
-  tag 'STIGS'
-  has_one :istig, IStig, tag: 'iSTIG'
-end
-
-class Checklist
-  include HappyMapper
-  tag 'CHECKLIST'
-  has_one :asset, Asset, tag: 'ASSET'
-  has_one :stig, Stigs, tag: 'STIGS'
-
-  def where(attrib, data)
-    stig.istig.vuln.each do |vuln|
-      if vuln.stig_data.any? { |element| element.attrib == attrib && element.data == data}
-        # @todo Handle multiple objects that match the condition
-        return vuln
-      end
-    end
-  end
-
-end
+require 'json'
+require_relative 'StigChecklist'
 
 class Inspec2ckl < Checklist
-  def initialize(json_file,cklist_file,output_file)
-    doc = File.open(cklist_file.to_s) { |f| Nokogiri::XML(f) }
-    inspec_json = File.read(json_file.to_s)
+  def initialize(json, cklist, output, verbose)
+    @verbose = verbose
+    inspec_json = File.read(json)
     @data = parse_json(inspec_json)
+    doc = File.open(cklist) { |f| Nokogiri::XML(f) }
     @checklist = Checklist.new
     @checklist = Checklist.parse(doc.to_s)
     update_ckl_file
-    File.write(output_file.to_s, @checklist.to_xml)
-    puts "Processed #{@data.keys.count} controls"
+    File.write(output, @checklist.to_xml)
+    puts "\nProcessed #{@data.keys.count} controls"
   end
 
   def clk_status(control)
+    puts 'Full Status list: ' + control[:status].join(', ') if @verbose
     status_list = control[:status].uniq
-    puts status_list if @verbose
     if status_list.include?('failed')
       result = 'Open'
     elsif status_list.include?('passed')
       result = 'NotAFinding'
     elsif status_list.include?('skipped')
       result = 'Not_Reviewed'
-    elsif control[:impact].to_f.zero?
-      result = 'Not_Applicable'
     else
       result = 'Not_Tested'
     end
-    if @verbose
-      puts vuln, status_list, result, json_results[vuln]['impact'], '============='
+    if control[:impact].to_f.zero?
+      result = 'Not_Applicable'
     end
     result
   end
 
   def clk_finding_details(control)
     control_clk_status = @checklist.where('Vuln_Num',control[:control_id]).status
-    result = "One or more of the automated tests failed or was inconvlusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
+    result = "One or more of the automated tests failed or was inconclusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
     result = 'All Automated tests passed for the control' if control_clk_status == 'NotAFinding'
     result = "Automated test skipped due to known accepted condition in the control : \n\n#{control[:message]}" if control_clk_status == 'Not_Reviewed'
-    result = "Justification: \n\n #{control[:message]}" if control_clk_status == 'Not_Applicable'
+    result = "Justification: \n #{control[:message].split.join(' ')}" if control_clk_status == 'Not_Applicable'
     result = 'No test available for this control' if control_clk_status == 'Not_Tested'
     result
   end
 
   def update_ckl_file
     @data.keys.each do | control_id |
+      print '.'
       vuln = @checklist.where('Vuln_Num',control_id.to_s)
       vuln.status = clk_status(@data[control_id])
       vuln.comments << "\n#{Time.now}: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project."

@@ -95,7 +95,7 @@ class Inspec2ckl < Checklist
     ap @checklist.where('Vuln_Num','V-72841').status
     update_ckl_file
 
-    File.write('nga6.ckl', @checklist.to_xml)
+    File.write('nga_completed.ckl', @checklist.to_xml)
     puts "Processed #{@data.keys.count} controls"
   end
 
@@ -108,10 +108,11 @@ class Inspec2ckl < Checklist
       result = 'NotAFinding'
     elsif status_list.include?('skipped')
       result = 'Not_Reviewed'
-    elsif control[:impact].to_f.zero?
-      result = 'Not_Applicable'
     else
       result = 'Not_Tested'
+    end
+    if control[:impact].to_f.zero?
+      result = 'Not_Applicable'
     end
     if @verbose
       puts vuln, status_list, result, json_results[vuln]['impact'], '============='
@@ -121,7 +122,7 @@ class Inspec2ckl < Checklist
 
   def clk_finding_details(control)
     control_clk_status = @checklist.where('Vuln_Num',control[:control_id]).status
-    result = "One or more of the automated tests failed or was inconvlusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
+    result = "One or more of the automated tests failed or was inconclusive for the control \n\n #{control[:message]}" if control_clk_status == 'Open'
     result = 'All Automated tests passed for the control' if control_clk_status == 'NotAFinding'
     result = "Automated test skipped due to known accepted condition in the control : \n\n#{control[:message]}" if control_clk_status == 'Not_Reviewed'
     result = "Justification: \n\n #{control[:message]}" if control_clk_status == 'Not_Applicable'
