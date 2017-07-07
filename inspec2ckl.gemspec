@@ -33,5 +33,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'thor', '~> 0.19'
   spec.add_dependency 'json', '>= 1.8', '< 3.0'
   spec.add_dependency 'pry', '~> 0'
-  spec.add_dependency 'json-schema', '~> 0'
 end

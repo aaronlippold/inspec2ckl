@@ -5,8 +5,6 @@
 
 require "thor"
 require 'nokogiri'
-require 'json-schema'
-require 'inspec/schema'
 require_relative 'version'
 require_relative 'inspec2ckl'
 
