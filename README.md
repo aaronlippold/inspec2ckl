@@ -9,7 +9,7 @@ Usage: inspec2ckl.rb [options]
     -c, --cklist ckl_file            the path to the DISA Checklist file (required)
     -j, --json json_file             the path to the InSpec JSON results file (required)
     -o, --output results.ckl         The file name you want for the output file (results.ckl)
-    -V, --verbose,                   Show me the data!!! (true|*false)
+    -V, --verbose,                   Show me the data!!!
     -v, --version                    inspec2ckl version
     -h, --help                       Displays Help
 ```
