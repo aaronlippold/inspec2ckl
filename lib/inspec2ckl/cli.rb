@@ -13,12 +13,13 @@ require_relative 'inspec2ckl'
 class MyCLI < Thor
   desc 'exec', 'Inspec2ckl translates Inspec results json to Stig Checklist'
   option :json, required: true, aliases: '-j'
-  option :cklist, required: true, aliases: '-c'
+  option :cklist, required: false, aliases: '-c'
   option :output, required: true, aliases: '-o'
   option :verbose, type: :boolean, aliases: '-V'
   def exec
     Inspec2ckl.new(options[:json], options[:cklist], options[:output], options[:verbose])
   end
+
 
   # desc 'validate', 'A small parser to take the JSON full output of an InSpec profile results and update the DISA Checklist file.'
   # option :json, aliases: '-j'
