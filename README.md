@@ -31,3 +31,5 @@ Version:
 ## Known Issues
 - Validation for the Json and XML files not yet implemented
 - More Issues welcome - please submit suggestions or issues on the board.
+- Error occurred while installing libxml-ruby (2.9.0) on MacOS.
+  Solution: https://gist.github.com/unixcharles/1226596

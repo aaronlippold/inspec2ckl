@@ -117,7 +117,12 @@ class Inspec2ckl < Checklist
 
   def parse_json(json)
     file = JSON.parse(json)
-    controls = file['profiles'].last['controls']
+    controls = []
+    file['profiles'].each do |profile|
+      controls << profile['controls']
+    end
+    controls.flatten!
+
     data = {}
     controls.each do |control|
       c_id = control['id'].to_sym
