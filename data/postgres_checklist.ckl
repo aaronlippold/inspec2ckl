@@ -172,6 +172,10 @@ $ export PGPORT=5432</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -349,6 +353,10 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -480,6 +488,10 @@ If PostgreSQL is not at the latest version and the evaluated version has CVEs (I
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -650,6 +662,10 @@ $ chmod 0600 &lt;log directory name&gt;/*.log</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -783,6 +799,10 @@ For each PostgreSQL-managed account that is not documented and approved, either 
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -908,6 +928,10 @@ $ service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -1051,6 +1075,10 @@ $ sudo chmod 0755 /usr/pgsql-9.5/bin/*</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -1182,6 +1210,10 @@ $ psql -c "ALTER ROLE rolename WITH NOSUPERUSER"</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -1301,6 +1333,10 @@ host all all .example.com md5</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -1529,6 +1565,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -1648,6 +1688,10 @@ RLS policies can be very different depending on their use case. For one example 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -1792,6 +1836,10 @@ $ psql -c "ALTER ROLE &lt;rolname&gt; CONNECTION LIMIT 1";</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -1915,6 +1963,10 @@ REVOKE SELECT ON some_function FROM bob;</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -2044,6 +2096,10 @@ For the complete list of permissions allowed by roles, see the official document
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -2163,6 +2219,10 @@ RLS policies can be very different depending on their use case. For one example 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -2293,6 +2353,10 @@ Do not allow general users direct console access to PostgreSQL.</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -2399,6 +2463,10 @@ If dynamic code execution is employed in circumstances where the objective could
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -2524,6 +2592,10 @@ If dynamic code execution is employed without protective measures against code i
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -2630,6 +2702,10 @@ If there have been incidents where PostgreSQL ran out of audit log space, this i
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -2769,6 +2845,10 @@ $ psql -c "REVOKE CREATE ON SCHEMA test FROM bob"</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -2934,6 +3014,10 @@ Check with the organization to see how syslog facilities are defined in their or
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -3064,6 +3148,10 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -3225,6 +3313,10 @@ client_min_messages = notice</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -3358,6 +3450,10 @@ $ chmod 600 ${PGDATA?}/postgresql.conf</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -3468,6 +3564,10 @@ It is possible to create scripts or implement third-party tools to enable real-t
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -3590,6 +3690,10 @@ To configure PostgreSQL to use SSL, see supplementary content APPENDIX-G for ins
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -3723,6 +3827,10 @@ $ psql -c "ALTER SCHEMA test OWNER TO bob"</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -3834,6 +3942,10 @@ If access or use of this account is not restricted to the minimum number of pers
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -3942,6 +4054,10 @@ If other applications are located in the same directory as PostgreSQL, this is a
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -4057,6 +4173,10 @@ To ensure that logging is enabled, review supplementary content APPENDIX-C for i
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -4185,6 +4305,10 @@ $ psql -c "ALTER FUNCTION &lt;function_name&gt; SECURITY INVOKER;"</ATTRIBUTE_DA
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -4306,6 +4430,10 @@ All errors and denials are logged if logging is enabled.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -4450,6 +4578,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -4585,6 +4717,10 @@ Do not grant access to pg_catalog or information_schema to anyone but the databa
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -4715,6 +4851,10 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -4895,6 +5035,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -5004,6 +5148,10 @@ If multiple versions of postgres are installed but are unused, this is a finding
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -5133,6 +5281,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -5384,6 +5536,10 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -5524,6 +5680,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -5675,6 +5835,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -5798,6 +5962,10 @@ Unsuccessful attempts to modifying security objects can be logged if logging is 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -5952,6 +6120,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -6088,6 +6260,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -6237,6 +6413,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -6379,6 +6559,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -6503,6 +6687,10 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -6631,6 +6819,10 @@ All denials are logged if logging is enabled. To ensure that logging is enabled,
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -6789,6 +6981,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -6923,6 +7119,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -7071,6 +7271,10 @@ All errors and denials are logged if logging is enabled. To ensure that logging 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -7229,6 +7433,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -7357,6 +7565,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -7507,6 +7719,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -7639,6 +7855,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -7789,6 +8009,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -7928,6 +8152,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -8060,6 +8288,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -8207,6 +8439,10 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -8349,6 +8585,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -8488,6 +8728,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -8616,6 +8860,10 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -8738,6 +8986,10 @@ All denials are logged by default if logging is enabled. To ensure that logging 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -8900,6 +9152,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -9041,6 +9297,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -9157,6 +9417,10 @@ To ensure that logging is enabled, review supplementary content APPENDIX-C for i
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -9303,6 +9567,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -9433,6 +9701,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -9543,6 +9815,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -9685,6 +9961,10 @@ Deploy NSA-approved encrypting devices to protect the server on the network.</AT
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -9797,6 +10077,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -9921,6 +10205,10 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -10067,6 +10355,10 @@ Implement the approved permissions. Revoke any unapproved permissions.</ATTRIBUT
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -10193,6 +10485,10 @@ ALTER ROLE &lt;username&gt; NOSUPERUSER NOCREATEDB NOCREATEROLE NOBYPASSRLS;</AT
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -10308,6 +10604,10 @@ For session logging we suggest using pgaudit. For instructions on how to setup p
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -10440,6 +10740,10 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -10599,6 +10903,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -10713,6 +11021,10 @@ Note: it is recommended that plpgsql not be removed.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -10847,6 +11159,10 @@ $ psql -c "DROP EXTENSION extension_name"</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -10970,6 +11286,10 @@ $ sudo apt-get remove &lt;package_name&gt;</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -11087,6 +11407,10 @@ RLS policies can be very different depending on their use case. For one example 
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -11225,6 +11549,10 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -11350,6 +11678,10 @@ $ psql -c "REVOKE ALL PRIVILEGES ON &lt;table&gt; FROM &lt;role_name&gt;;</ATTRI
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -11495,6 +11827,10 @@ Use accounts assigned to individual users. Where the application connects to Pos
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -11647,6 +11983,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -11773,6 +12113,10 @@ Schedule this script in cron to run around the clock.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -11968,6 +12312,10 @@ For a specific audit role:
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -12101,6 +12449,10 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE user LIKE '%'</ATTR
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -12244,6 +12596,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -12360,6 +12716,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -12529,6 +12889,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -12648,6 +13012,10 @@ INSERT INTO accounts(username, password) VALUES ('bob', crypt('a_secure_password
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -12787,6 +13155,10 @@ $ sudo service postgresql-9.5 restart</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -12942,6 +13314,10 @@ $ psql -c "ALTER ROLE &lt;role-name&gt; WITH NOSUPERUSER"</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -13075,6 +13451,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -13199,6 +13579,10 @@ $ sudo chown -R root:root /usr/pgsql-9.5/share/contrib/pgaudit</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -13346,6 +13730,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -13474,6 +13862,10 @@ For further SSL configurations, see the official documentation: https://www.post
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -13621,6 +14013,10 @@ For more information on pg_hba.conf, see the official documentation: https://www
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -13748,6 +14144,10 @@ This script would be added to a cron job:
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -13899,6 +14299,10 @@ See the PostgreSQL documentation for more details: http://www.postgresql.org/doc
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -14024,6 +14428,10 @@ For information on configuring PostgreSQL to use SSL, see supplementary content 
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -14134,6 +14542,10 @@ If the code that exists for data movement does not comply with the organization-
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -14252,6 +14664,10 @@ Any files (for example: extra configuration files) created in PGDATA must be own
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -14392,6 +14808,10 @@ $ chmod 0600 ${PGDATA?}/*.conf</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -14506,6 +14926,10 @@ For more information on configuring PostgreSQL to use SSL, see supplementary con
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -14643,6 +15067,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -14794,6 +15222,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -14933,6 +15365,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
                     <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA>Unclass</ATTRIBUTE_DATA>
                 </STIG_DATA>
@@ -15037,6 +15473,10 @@ If FIPS encryption is not enabled, this is a finding.</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
@@ -15182,6 +15622,10 @@ $ sudo service postgresql-9.5 reload</ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
                     <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+                    <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
+                </STIG_DATA>
+                <STIG_DATA>
+                    <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
                     <ATTRIBUTE_DATA></ATTRIBUTE_DATA>
                 </STIG_DATA>
                 <STIG_DATA>
