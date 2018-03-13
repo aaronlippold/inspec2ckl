@@ -3,15 +3,18 @@
 # author: Aaron Lippold
 # author: Rony Xavier rx294@nyu.edu
 
+require 'date'
 require 'happymapper'
 require 'nokogiri'
 require 'json'
 require_relative 'StigChecklist'
 
 class Inspec2ckl < Checklist
-  def initialize(json, cklist, output, verbose)
+  def initialize(json, cklist, title, date, output, verbose)
     @verbose = verbose
     @cklist = cklist
+    @title = title
+    @date = date
     inspec_json = File.read(json)
     @data = parse_json(inspec_json)
     @checklist = Checklist.new
@@ -20,6 +23,7 @@ class Inspec2ckl < Checklist
     else
       update_ckl_file
     end
+
     File.write(output, @checklist.to_xml)
     puts "\nProcessed #{@data.keys.count} controls"
   end
@@ -58,7 +62,6 @@ class Inspec2ckl < Checklist
       print '.'
       vuln = @checklist.where('Vuln_Num',control_id.to_s)
       vuln.status = clk_status(@data[control_id])
-      vuln.comments << "\n#{Time.now}: Automated compliance tests brought to you by the MITRE corporation, CrunchyDB and the InSpec project."
       vuln.finding_details << clk_finding_details(@data[control_id], vuln.status)
 
       if @verbose
@@ -86,17 +89,25 @@ class Inspec2ckl < Checklist
 
     stigdata = StigData.new
     stigdata.attrib = 'STIGRef'
-    stigdata.data = 'Nginx Security Technical Implementation Guide :: Release: 1'
+    stigdata.data = @title
     stig_data_list.push(stigdata)
 
     vuln.stig_data = stig_data_list
     vuln.status = clk_status(control)
-    vuln.comments = "\n#{Time.now}: Automated compliance tests brought to you by the MITRE corporation and the InSpec project."
+    vuln.comments = "\nAutomated compliance tests brought to you by the MITRE corporation and the InSpec project.\n\nInspec Profile: #{control[:profile_name]}\nProfile shasum: #{control[:profile_shasum]}"
     vuln.finding_details = clk_finding_details(control, vuln.status)
     vuln.severity_override = ''
     vuln.severity_justification = ''
 
     vuln
+  end
+
+  def generate_title
+    if !title.nil?
+      ckl_title = @title
+    else
+      ckl_title = "Untitled - Checklist Created from Automated InSpec Results JSON <profile_name>"
+    end
   end
 
   def generate_ckl
@@ -117,42 +128,44 @@ class Inspec2ckl < Checklist
 
   def parse_json(json)
     file = JSON.parse(json)
-    controls = []
-    file['profiles'].each do |profile|
-      controls << profile['controls']
-    end
-    controls.flatten!
+
+    @title = "Untitled - Checklist Created from Automated InSpec Results JSON; Profiles: #{file['profiles'].map { |x| x['name'] }.join(" | ")}" unless @title
+    @title = @title + " Checklist Date: #{@date || Date.today.to_s}" #+ Date.today.to_s
 
     data = {}
-    controls.each do |control|
-      c_id = control['id'].to_sym
-      data[c_id] = {}
-      data[c_id][:vuln_num]       = control['id'] unless control['id'].nil?
-      data[c_id][:rule_title]     = control['title'] unless control['title'].nil?
-      data[c_id][:vuln_discuss]   = control['desc'] unless control['desc'].nil?
-      data[c_id][:severity]       = control['tags']['severity'] unless control['tags']['severity'].nil?
-      data[c_id][:gid]            = control['tags']['gid'] unless control['tags']['gid'].nil?
-      data[c_id][:group_title]    = control['tags']['gtitle'] unless control['tags']['gtitle'].nil?
-      data[c_id][:rule_id]        = control['tags']['rid'] unless control['tags']['rid'].nil?
-      data[c_id][:rule_ver]       = control['tags']['stig_id'] unless control['tags']['stig_id'].nil?
-      data[c_id][:cci_ref]        = control['tags']['cci'] unless control['tags']['cci'].nil?
-      data[c_id][:nist]           = control['tags']['nist'].join(' ') unless control['tags']['nist'].nil?
-      data[c_id][:check_content]  = control['tags']['check'] unless control['tags']['check'].nil?
-      data[c_id][:fix_text]       = control['tags']['fix'] unless control['tags']['fix'].nil?
-      data[c_id][:impact]         = control['impact'].to_s unless control['impact'].nil?
+    file['profiles'].each do |profile|
+      profile['controls'].each do |control|
+        c_id = control['id'].to_sym
+        data[c_id] = {}
+        data[c_id][:vuln_num]       = control['id'] unless control['id'].nil?
+        data[c_id][:rule_title]     = control['title'] unless control['title'].nil?
+        data[c_id][:vuln_discuss]   = control['desc'] unless control['desc'].nil?
+        data[c_id][:severity]       = control['tags']['severity'] unless control['tags']['severity'].nil?
+        data[c_id][:gid]            = control['tags']['gid'] unless control['tags']['gid'].nil?
+        data[c_id][:group_title]    = control['tags']['gtitle'] unless control['tags']['gtitle'].nil?
+        data[c_id][:rule_id]        = control['tags']['rid'] unless control['tags']['rid'].nil?
+        data[c_id][:rule_ver]       = control['tags']['stig_id'] unless control['tags']['stig_id'].nil?
+        data[c_id][:cci_ref]        = control['tags']['cci'] unless control['tags']['cci'].nil?
+        data[c_id][:nist]           = control['tags']['nist'].join(' ') unless control['tags']['nist'].nil?
+        data[c_id][:check_content]  = control['tags']['check'] unless control['tags']['check'].nil?
+        data[c_id][:fix_text]       = control['tags']['fix'] unless control['tags']['fix'].nil?
+        data[c_id][:impact]         = control['impact'].to_s unless control['impact'].nil?
+        data[c_id][:profile_name]   = profile['name'].to_s unless profile['name'].nil?
+        data[c_id][:profile_shasum] = profile['sha256'].to_s unless profile['sha256'].nil?
 
-      data[c_id][:status] = []
-      data[c_id][:message] = []
-      if control.key?('results')
-        control['results'].each do |result|
-          data[c_id][:status].push(result['status'])
-          data[c_id][:message].push(result['skip_message']) if result['status'] == 'skipped'
-          data[c_id][:message].push("FAILED -- Test: #{result['code_desc']}\nMessage: #{result['message']}\n") if result['status'] == 'failed'
-          data[c_id][:message].push("PASS -- #{result['code_desc']}\n") if result['status'] == 'passed'
+        data[c_id][:status] = []
+        data[c_id][:message] = []
+        if control.key?('results')
+          control['results'].each do |result|
+            data[c_id][:status].push(result['status'])
+            data[c_id][:message].push(result['skip_message']) if result['status'] == 'skipped'
+            data[c_id][:message].push("FAILED -- Test: #{result['code_desc']}\nMessage: #{result['message']}\n") if result['status'] == 'failed'
+            data[c_id][:message].push("PASS -- #{result['code_desc']}\n") if result['status'] == 'passed'
+          end
         end
-      end
-      if data[c_id][:impact].to_f.zero?
-        data[c_id][:message] = control['desc']
+        if data[c_id][:impact].to_f.zero?
+          data[c_id][:message] = control['desc']
+        end
       end
     end
     data
