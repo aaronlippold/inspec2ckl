@@ -1,2 +1,2 @@
-STIGRef: 'Nginx Security Technical Implementation Guide :: Release: 1 Benchmark Date: 2 Aug 2017'
-comments: Automated compliance tests brought to you by the MITRE corporation and the InSpec project.
+STIGRef: 'ElasticSearch v5/v6 {draft} STIG' :: Release: 1 Benchmark Date: 27 Feb 2018'
+comments: Automated compliance tests brought to you by the Elastic.co, the MITRE corporation and the InSpec project.
