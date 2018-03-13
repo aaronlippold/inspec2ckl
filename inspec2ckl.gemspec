@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'nokogiri-happymapper', '~> 0'
   spec.add_dependency 'happymapper', '~> 0'
-  spec.add_dependency 'nokogiri', '~> 0'
+  spec.add_dependency 'nokogiri', '~> 1.8.1'
   spec.add_dependency 'thor', '~> 0.19'
   spec.add_dependency 'json', '>= 1.8', '< 3.0'
   spec.add_dependency 'pry', '~> 0'
