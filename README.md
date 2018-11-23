@@ -1,6 +1,6 @@
 # DEPRECATED: inspec2ckl  
 
-## NOTE: This repo is **no longer maintained** here. Please use [inspec-tools](https://github.com/mitre/inspec-tools).
+## NOTE: This repo is **no longer maintained** here. Please use [inspec_tools](https://github.com/mitre/inspec_tools).
 
 A small parser to take the JSON full output of an InSpec profile results and update the DISA Checklist file.
 
